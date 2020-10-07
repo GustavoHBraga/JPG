@@ -16,7 +16,7 @@
     <body class="align">
         <h1>Join For Protect Get</h1>
         <div class="grid">
-            <form action="executa_registros.jsp" method="post" class="form login" name="formRegistro">
+            <form action="RegistrosServlet" class="form login" name="formRegistro">
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuário</span></label>
                     <input id="login__username" type="text" name="usuario" class="form__input" placeholder="Nome de usuário *" required>

@@ -2,11 +2,6 @@
     Author     : JPG
 --%>
 
-<%@page import="DAO.ConnectionFactory"%>
-<%@page import="java.sql.Connection"%>
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.sql.Statement"%>
-<%@page import="DAO.RegistrosDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
@@ -17,7 +12,7 @@
     <body class="align">
             <h1>Join For Protect Get</h1>
             <div class="grid">
-        <form action="login.jsp" method="post" class="form login">
+        <form action="LoginServlet" class="form login">
             <div class="form__field">
             <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuário</span></label>
             <input id="login__username" type="text" name="usuario" class="form__input" placeholder="Usuário" required>
@@ -36,29 +31,6 @@
         <p class="text--center">É paciente e deseja realizar uma consulta ? acesse nosso <a href="#"><b>Formulário de Triagem</b></a>
     </body>
 </html>
-<%
-   if (request.getParameter("usuario") != null && request.getParameter("senha") != null) {
-       
-        String usuario = request.getParameter("usuario");
-        String senha = request.getParameter("senha");
-           
-            Connection conexao = new ConnectionFactory().getConexao();
-            Statement statement;
-            ResultSet resultSet;
-            
-            String sql = "SELECT * FROM registros WHERE usuario = '" + usuario + "' AND senha = '" + senha + "'";
-            
-            statement = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.TYPE_FORWARD_ONLY);
-            resultSet = statement.executeQuery(sql);
-            
-            if (resultSet.next()) {
-                    session.setAttribute("usuario", usuario);
-                    response.sendRedirect("index.jsp");
-                }else{
-                    out.print("<h5 style='color: crimson'>Usuário ou Senha inválidos!</h5>");
-            }
-       }
-    
-%>
+
 
 
