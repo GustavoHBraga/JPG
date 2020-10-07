@@ -1,0 +1,11 @@
+******Sempre quando for mexer o projeto********
+
+1)	git pull
+
+******Depois que terminar e for enviar ao GIT********
+
+2)	git add .
+
+3)	git commit -m "frase de atualização"
+
+4)	git push
