@@ -28,4 +28,5 @@ function validaRegistro(){
        formRegistro.email.focus();
        return false;
     }
+    
 }

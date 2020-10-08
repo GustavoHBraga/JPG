@@ -31,6 +31,7 @@ public class RegistrosServlet extends HttpServlet {
 
             if (request.getParameter("usuario").equals("") || request.getParameter("nome").equals("") || request.getParameter("email").equals("") || request.getParameter("senha").equals("") || request.getParameter("senhaRepitida").equals("")) {
                 response.sendRedirect("registros.jsp");
+                
 
             } else {
                 registro.setUsuario(request.getParameter("usuario"));
@@ -43,12 +44,14 @@ public class RegistrosServlet extends HttpServlet {
                 preparedStatement.close();
                 registroDAO.registrar(registro);
                 response.sendRedirect("login.jsp");
+                
             }
 
             
         } catch (Exception erro) {
             System.out.print("<h1 style='color: crimson'>Este nome de usuário já existe, tente outro nome.</h1>");
             response.sendRedirect("registros.jsp");
+            
         }
     }
 
