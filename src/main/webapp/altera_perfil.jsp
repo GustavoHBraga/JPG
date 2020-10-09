@@ -11,17 +11,11 @@
         <link rel="stylesheet" type="text/css" href="lib/css/altera_perfil.css">
         <script type="text/javascript" src="lib/js/validaAlteraPerfil.js"></script>
     </head>
-    <%
-        String usuario = (String) session.getAttribute("usuario");
 
-        if (usuario == null) {
-            response.sendRedirect("login.jsp");
-        }
-    %>
     <body class="align">
         <h1>Perfil</h1>
         <div class="grid">
-            <form action="executa_altera_perfil.jsp" method="post" class="form login"  name="formAlteraPerfil">
+            <form action="AlteraPerfilServlet" method="post" class="form login"  name="formAlteraPerfil">
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuário</span></label>
                     <input id="login__username" type="text" name="usuario" class="form__input" placeholder="Novo nome de usuário *" required>

@@ -16,6 +16,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author JPG
  */
+
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
 
@@ -48,7 +49,7 @@ public class LoginServlet extends HttpServlet {
                     System.out.print("<h5 style='color: crimson'>Usuário ou Senha inválidos!</h5>");
                 }
             }
-            
+
         } catch (Exception erro) {
             System.out.println("ERRO AO REALIZAR ACESSO AO SISTEMA: " + erro.getMessage());
 
