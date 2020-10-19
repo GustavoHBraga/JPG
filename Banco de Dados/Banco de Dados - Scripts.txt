@@ -1,0 +1,90 @@
+create database jpg;
+
+use jpg;
+
+create table medicos(
+
+medicos.id int not null auto_increment,
+medicos.username varchar(40) not null,
+medicos.nome varchar(50) not null,
+medicos.email varchar(50) not null,
+medicos.senha varchar(50) not null,
+medicos.crm varchar(10) not null,
+medicos.especializacao varchar(50) not null,
+primary key (id)
+);
+
+select * from medicos;
+
+truncate medicos;
+
+create table atividades(
+
+atividades.id int not null auto_increment,
+atividades.medico int not null,
+atividades.titulo varchar(50) not null,
+atividades.mensagem text,
+atividades.data date,
+atividades.status varchar(20) not null,
+primary key (id),
+foreign key (medico) references medicos(id)
+);
+
+select * from atividades;
+
+truncate atividades;
+
+create table noticias(
+
+noticias.id int not null auto_increment,
+noticias.medico int not null,
+noticias.titulo varchar(50) not null,
+noticias.mensagem text not null,
+noticias.data date not null,
+primary key (id),
+foreign key (medico) references medicos(id)
+);
+
+select * from noticias;
+
+truncate noticias;
+
+
+create table paciente(
+
+paciente.cpf int not null,
+paciente.nome varchar(50) not null,
+paciente.data_nascimento date not null,
+paciente.email varchar(50) not null,
+paciente.cep varchar(10) not null,
+paciente.telefone int not null,
+paciente.outro_contato varchar(40),
+paciente.sexo enum('M','F'),
+primary key (cpf)
+);
+
+truncate paciente;
+
+select * from paciente;
+
+create table triagem(
+
+triagem.id int not null auto_increment,
+triagem.id_medico int not null,
+triagem.cpf_paciente int not null,
+triagem.alteracao_paladar enum('S','N') not null,
+triagem.disturbios_gastrintestinais enum('S','N') not null,
+triagem.falta_ar enum('S','N') not null,
+triagem.tosse enum('S','N') not null,
+triagem.febre enum('S','N') not null,
+triagem.dor_garganta enum('S','N') not null,
+triagem.dificuldade_respirar enum('S','N') not null,
+triagem.perda_olfato enum('S','N') not null,
+primary key(id),
+foreign key (cpf_paciente) references paciente(cpf),
+foreign key (id_medico) references medicos(id)
+);
+
+select * from triagem;
+
+truncate triagem;
