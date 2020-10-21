@@ -18,7 +18,7 @@ public class RegistrosDAO {
         conexao = new ConnectionFactory().getConexao();
     }
 
-    public void registrar(Registros registro) {
+    public void registrarMedicos(Registros registro) {
 
         String sql = "INSERT INTO medicos (username, nome, email, crm, especializacao, senha) VALUES (?,?,?,?,?,?)";
 

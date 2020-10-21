@@ -38,7 +38,7 @@ public class RegistrosServlet extends HttpServlet {
 
                 if (registro.getUsername().length() >= 6 && registro.getEmail().length() >= 6 && registro.getSenha().length() >= 6 && registro.getSenha().equals(request.getParameter("senhaRepitida"))) {
 
-                    registroDAO.registrar(registro);
+                    registroDAO.registrarMedicos(registro);
                     response.sendRedirect("login.jsp");
 
                 } else {

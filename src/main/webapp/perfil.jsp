@@ -47,7 +47,7 @@
         </div>
         <br>
         <div class="container">
-            <a href="altera_perfil.jsp"><button class="btn-5">Alterar Perfil</button></a>
+            <a href="altera_perfil.jsp"><button class="btn-5" style="font-size: 13px;">Alterar Perfil</button></a>
         </div>
     </body>
 </html>
