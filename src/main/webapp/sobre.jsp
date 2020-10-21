@@ -12,7 +12,7 @@
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
     </head>
     <%
-        String usuario = (String) session.getAttribute("usuario");
+        String usuario = (String) session.getAttribute("username");
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");

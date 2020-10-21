@@ -1,14 +1,14 @@
 function validaAlteraPerfil(){
     
-    var usuario = formAlteraPerfil.usuario.value;
+    var username = formAlteraPerfil.username.value;
     var senhaNova = formAlteraPerfil.senhaNova.value;
     var senhaRepitida = formAlteraPerfil.senhaRepitida.value;
     var email = formAlteraPerfil.email.value;
     var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     
-    if (usuario.length < 5) {
+    if (username.length < 5) {
         alert('Preencha o campo novo usuário com minímo 6 caracteres.');
-        formAlteraPerfil.usuario.focus();
+        formAlteraPerfil.username.focus();
         return false;
     }
     

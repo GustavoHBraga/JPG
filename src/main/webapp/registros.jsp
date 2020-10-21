@@ -19,7 +19,7 @@
             <form action="RegistrosServlet" method="post" class="form login" name="formRegistro">
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuário</span></label>
-                    <input id="login__username" type="text" name="usuario" class="form__input" placeholder="Nome de usuário *" required>
+                    <input id="login__username" type="text" name="username" class="form__input" placeholder="Nome de usuário *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Nome</span></label>
@@ -27,7 +27,15 @@
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
-                    <input id="login__username" type="text" name="email" class="form__input" placeholder="E-mail *">
+                    <input id="login__username" type="text" name="email" class="form__input" placeholder="E-mail *" required>
+                </div>
+                <div class="form__field">
+                    <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">CRM</span></label>
+                    <input id="login__username" type="text" name="crm" class="form__input" maxlength="10" placeholder="CRM *" required>
+                </div>
+                <div class="form__field">
+                    <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Especialização</span></label>
+                    <input id="login__username" type="text" name="especializacao" class="form__input" placeholder="Especialização *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">Senha</span></label>
@@ -44,7 +52,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;total acesso aos recursos do sistema JPG.
                 </div>
                 <div class="form__field">
-                    <input type="submit" value="Registrar" onclick="return validaRegistro(), alert('Cadastro realizado com sucesso!')">
+                    <input type="submit" value="Registrar" onclick="return validaRegistro(), alert('Clique em OK para prosseguir.')">
                 </div>
             </form>
             <p class="text--center">Já é cadastrado ? <a href="login.jsp"><b>Acesse</b></a> <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>

@@ -17,7 +17,7 @@
     </head>
 
     <%
-        String usuario = (String) session.getAttribute("usuario");
+        String usuario = (String) session.getAttribute("username");
         if (usuario == null) {
             response.sendRedirect("login.jsp");
         }
@@ -26,7 +26,7 @@
         Statement statement;
         ResultSet resultSet;
 
-        String sql = "SELECT nome, email, id FROM registros WHERE usuario = '" + user + "'";
+        String sql = "SELECT nome, email, crm, especializacao FROM medicos WHERE username = '" + user + "'";
         statement = conexao.createStatement();
         statement = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.TYPE_FORWARD_ONLY);
         resultSet = statement.executeQuery(sql);
@@ -39,8 +39,9 @@
                 <h1><b><%=usuario%></b></h1>
                 <%do { %>
                 <p><b><%out.print(resultSet.getString("nome"));%></b></p>
+                <p><b><%out.print(resultSet.getString("crm"));%></b></p>
                 <p><b><%out.print(resultSet.getString("email"));%></b></p>
-                <p><b><%out.print("ID: " + resultSet.getString("id"));%></b></p>
+                <p><b><%out.print(resultSet.getString("especializacao"));%></b></p>
                 <%} while (resultSet.next());%>
             </div>
         </div>

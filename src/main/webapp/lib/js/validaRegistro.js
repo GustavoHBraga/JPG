@@ -1,14 +1,14 @@
 function validaRegistro(){
     
-    var usuario = formRegistro.usuario.value;
+    var username = formRegistro.username.value;
     var senha = formRegistro.senha.value;
     var senhaRepitida = formRegistro.senhaRepitida.value;
     var email = formRegistro.email.value;
     var filtro = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     
-    if (usuario.length < 5) {
+    if (username.length < 5) {
         alert('Preencha o campo usuário com minímo 6 caracteres.');
-        formRegistro.usuario.focus();
+        formRegistro.username.focus();
         return false;
     }
     

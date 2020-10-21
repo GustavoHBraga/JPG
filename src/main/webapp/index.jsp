@@ -12,7 +12,7 @@
     </head>
 
     <%
-        String usuario = (String) session.getAttribute("usuario");
+        String usuario = (String) session.getAttribute("username");
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");

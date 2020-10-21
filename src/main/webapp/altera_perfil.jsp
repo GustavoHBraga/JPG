@@ -18,7 +18,7 @@
             <form action="AlteraPerfilServlet" method="post" class="form login"  name="formAlteraPerfil">
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuário</span></label>
-                    <input id="login__username" type="text" name="usuario" class="form__input" placeholder="Novo nome de usuário *" required>
+                    <input id="login__username" type="text" name="username" class="form__input" placeholder="Novo nome de usuário *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
@@ -29,6 +29,14 @@
                     <input id="login__username" type="text" name="email" class="form__input" placeholder="Novo e-mail *" required>
                 </div>
                 <div class="form__field">
+                    <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
+                    <input id="login__username" type="text" name="crm" class="form__input" maxlength="10" placeholder="Novo crm *" required>
+                </div>
+                <div class="form__field">
+                    <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
+                    <input id="login__username" type="text" name="especializacao" class="form__input" placeholder="Nova especialização *" required>
+                </div>
+                <div class="form__field">
                     <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">SenhaNova</span></label>
                     <input id="login__password" type="password" name="senhaNova" class="form__input" placeholder="Nova senha *" required>
                 </div>
@@ -37,7 +45,7 @@
                     <input id="login__password" type="password" name="senhaRepitida" class="form__input" placeholder="Repita a nova senha *" required>
                 </div>
                 <div class="form__field">
-                    <input type="submit" value="Alterar meus Dados" onclick="return validaAlteraPerfil(), alert('Seus dados foram alterados com sucesso!')">
+                    <input type="submit" value="Alterar meus Dados" onclick="return validaAlteraPerfil(), alert('Clique em OK para prosseguir.')">
                 </div>
             </form>
             <p class="text--center"><a href="index.jsp">Cancelar</a><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/icons.svg#arrow-right"></use></svg></p>
