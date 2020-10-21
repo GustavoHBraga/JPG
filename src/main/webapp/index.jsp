@@ -36,7 +36,7 @@
                     <ul>
                         <li><a href="perfil.jsp">Olá<%out.print(" " + usuario);%></a></li>
                         <li><a href="#">Triagens</a></li>
-                        <li><a href="#">Notícias</a></li>
+                        <li><a href="noticias.jsp">Notícias</a></li>
                         <li><a href="atividades.jsp">Minhas Atividades</a></li>
                         <li><a href="sobre.jsp">Sobre</a></li>
                         <li><a href="logoff.jsp">Logoff</a></li>
