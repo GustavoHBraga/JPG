@@ -1,13 +1,12 @@
-/**
- *
- * @author JPG
- */
 package DAO;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-
+/**
+ *
+ * @author JPG
+ */
 public class ConnectionFactory {
     
     public Connection getConexao(){

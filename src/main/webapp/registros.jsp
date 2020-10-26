@@ -11,6 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JPG | Cadastre-se</title>
         <link rel="stylesheet" type="text/css" href="lib/css/registros.css">
+        <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
         <script type="text/javascript" src="lib/js/validaRegistro.js"></script>
     </head>
     <body class="align">

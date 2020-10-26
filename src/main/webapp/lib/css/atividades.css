@@ -11,11 +11,37 @@ body {
 div.table-title {
    display: block;
   margin: auto;
-  max-width: 600px;
+  max-width: 800px;
   padding:5px;
   width: 100%;
 }
 
+label{
+    color: #fafafa;
+    font-family: Candara;
+}
+
+.form-contact {
+  width: 100%;
+  font-family: "Candara";
+}
+
+.form-contact-input {
+  width: 100%;
+  color: #292929;
+  font-size: 18px;
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
+  font-family: "Candara";
+}
 
 .table-title h3 {
    color: #fafafa;
@@ -106,7 +132,7 @@ td {
   padding:20px;
   text-align:left;
   vertical-align:middle;
-  font-weight:300;
+  font-weight:700;
   font-size:18px;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
   border-right: 1px solid #C1C3D1;

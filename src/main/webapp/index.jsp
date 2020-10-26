@@ -2,15 +2,17 @@
     Author     : JPG
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JPG | Dashboard</title>
-        <link rel="stylesheet" href="lib/css/index.css">
+        <link rel="stylesheet" type="text/css" href="lib/css/index.css">
+        <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-
     <%
         String usuario = (String) session.getAttribute("username");
 
@@ -18,7 +20,6 @@
             response.sendRedirect("login.jsp");
         }
     %>
-
     <body background="lib/img/background.jpg">
         <div class="container">
             <nav>
@@ -34,12 +35,12 @@
                 </div>
                 <div class="nav-wrapper">
                     <ul>
-                        <li><a href="perfil.jsp">Olá<%out.print(" " + usuario);%></a></li>
+                        <li><a href="PerfilServlet">Olá&nbsp;<c:out value="${sessionScope.username}"></c:out></a></li>
                         <li><a href="#">Triagens</a></li>
-                        <li><a href="#">Notícias</a></li>
-                        <li><a href="atividades.jsp">Minhas Atividades</a></li>
+                        <li><a href="noticias.jsp">Notícias</a></li>
+                        <li><a href="AtividadesServlet">Atividades</a></li>
                         <li><a href="sobre.jsp">Sobre</a></li>
-                        <li><a href="logoff.jsp">Logoff</a></li>
+                        <li><a href="LogoffServlet">Logoff</a></li>
                     </ul>
                 </div>
             </nav>
@@ -52,11 +53,11 @@
         </style>
         <br><br><br><br><br><br><br>
         <h1>&nbsp;&nbsp;O Coronavírus</h1>
-        
+
         <p>&nbsp;&nbsp;&nbsp;&nbsp;Coronavírus é uma família de vírus que causam infecções</p>  
         <p>&nbsp;&nbsp;&nbsp;&nbsp;respiratórias. O novo agente do coronavírus (nCoV-2019)</p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;foi descoberto em 31/12/19 após casos registrados na China.</p> 
-        
+
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <a href="#" onclick="swal('A transmissão acontece de uma pessoa doente para outra ou por contato próximo por meio de:\n\
@@ -74,8 +75,8 @@
         - maçanetas;\n\
         - brinquedos;\n\
         - teclados de computador etc...');">
-        <b>&#10146;&nbsp;&nbsp;Como é transmitido ?</b></a>
-        
+            <b><i class="fa fa-bar-chart" style="color: teal; font-size: 20px;"></i>&nbsp;&nbsp;Como é transmitido ?</b></a>
+
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <a href="#" onclick="swal('Os sintomas da COVID-19 podem variar de um resfriado, a uma Síndrome Gripal-SG (presença de um quadro respiratório agudo, caracterizado por, pelo menos dois dos seguintes sintomas: sensação febril ou febre associada a dor de garganta, dor de cabeça, tosse, coriza) até uma pneumonia severa. Sendo os sintomas mais comuns:\n\
@@ -92,8 +93,8 @@
         - Cansaço (astenia);\n\
         - Diminuição do apetite (hiporexia);\n\
         - Dispnéia ( falta de ar);');">
-        <b>&#10146;&nbsp;&nbsp;Quais são os sintomas ?</b></a>
-        
+            <b><i class="fa fa-stethoscope" style="color: teal; font-size: 25px;"></i>&nbsp;&nbsp;Quais são os sintomas ?</b></a>
+
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <a href="#" onclick="swal('As recomendações de prevenção à COVID-19 são as seguintes:\n\
@@ -103,8 +104,8 @@
         - Ao tossir ou espirrar, cubra nariz e boca com lenço ou com a parte interna do cotovelo. Não tocar olhos, nariz, boca ou a máscara de proteção fácil com as mãos não higienizadas. Se tocar olhos, nariz, boca ou a máscara, higienize sempre as mãos como já indicado.\n\
         \n\
         - Mantenha distância mínima de 1 (um) metro entre pessoas em lugares públicos e de convívio social. Evite abraços, beijos e apertos de mãos. Adote um comportamento amigável sem contato físico, mas sempre com um sorriso no rosto.');">
-        <b>&#10146;&nbsp;&nbsp;Como se proteger ?</b></a>
-        
+            <b><i class="fa fa-street-view" style="color: teal; font-size: 25px;"></i>&nbsp;&nbsp;Como se proteger ?</b></a>
+
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <a href="#" onclick="swal('Informe aos amigos e colegas de trabalho sobre a importância do uso de máscara e da higienização das mãos na prevenção da disseminação do vírus causador da doença COVID-19.\n\
@@ -118,8 +119,8 @@
         - Reforçar os hábitos de higiene e proteção como a utilização de máscara, higienização das mãos com água e sabão ou com álcool em gel 70 %.\n\
         \n\
         - Caso apresente sintomas de gripe, busque atendimento nos serviços de saúde, e evite contato com outras pessoas.');">
-        <b>&#10146;&nbsp;&nbsp;Como estimular outras pessoas ?</b></a>
-        
+            <b><i class="fa fa-group" style="color: teal; font-size: 21px;"></i>&nbsp;&nbsp;Como estimular outras pessoas ?</b></a>
+
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <a href="#" onclick="swal('Se estiver doente, com sintomas compatíveis com a COVID-19, tais como febre, tosse, dor de garganta e/ou coriza, com ou sem falta de ar, evite contato físico com outras pessoas, incluindo os familiares, principalmente, idosos e doentes crônicos, Procure imediatamente os postos de triagem nas Unidades Básicas de Saúde / UPAS ou outras unidades de saúde.\n\
@@ -127,8 +128,8 @@
         Também é possível ser consultado pela plataforma JPG, onde médicos profíssionais estarão aptos e disponíveis para o atendimento.\n\
         \n\
         UTILIZE MÁSCARA O TEMPO TODO.');">
-        <b>&#10146;&nbsp;&nbsp;Se eu ficar doente ?</b></a>
-        
+            <b><i class="fa fa-user-md" style="color: teal; font-size: 25px;"></i>&nbsp;&nbsp;Se eu ficar doente ?</b></a>
+
         <br><br><br><br>
         &nbsp;&nbsp;
         <iframe src="https://player.vimeo.com/video/447264182" width="450" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>

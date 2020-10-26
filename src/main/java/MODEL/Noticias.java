@@ -1,3 +1,4 @@
+
 package MODEL;
 
 import java.util.Date;
@@ -6,23 +7,20 @@ import java.util.Date;
  *
  * @author JPG
  */
-public class Atividades {
-
-    private int idAtividade;
+public class Noticias {
+    
+    private int idNoticias;
     private String usernameMedico;
     private String titulo;
     private String mensagem;
     private Date data;
-    private String status;
-    
-    
-    
-    public int getIdAtividade() {
-        return idAtividade;
+
+    public int getIdNoticias() {
+        return idNoticias;
     }
 
-    public void setIdAtividade(int idAtividade) {
-        this.idAtividade = idAtividade;
+    public void setIdNoticias(int idNoticias) {
+        this.idNoticias = idNoticias;
     }
 
     public String getUsernameMedico() {
@@ -56,13 +54,6 @@ public class Atividades {
     public void setData(Date data) {
         this.data = data;
     }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
+    
+    
 }

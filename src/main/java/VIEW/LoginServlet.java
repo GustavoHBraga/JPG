@@ -21,10 +21,11 @@ import javax.servlet.http.HttpSession;
 public class LoginServlet extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         try {
+            
             if (request.getParameter("username") != null && request.getParameter("senha") != null) {
 
                 String usuario = request.getParameter("username");
@@ -45,7 +46,8 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("index.jsp");
 
                 } else {
-                    request.setAttribute("info", "usuário ou senha inválidos!");
+
+                    request.setAttribute("informacao", "Usuário ou Senha inválidos!");
                     RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
                     dispatcher.forward(request, response);
 

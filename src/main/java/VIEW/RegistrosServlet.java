@@ -21,6 +21,7 @@ public class RegistrosServlet extends HttpServlet {
             throws ServletException, IOException {
 
         try {
+
             Registros registro = new Registros();
             RegistrosDAO registroDAO = new RegistrosDAO();
 
@@ -28,28 +29,24 @@ public class RegistrosServlet extends HttpServlet {
 
                 response.sendRedirect("registros.jsp");
 
-            } else {
+            } else if (request.getParameter("username").length() >= 6 && request.getParameter("email").length() >= 6 && request.getParameter("senha").length() >= 6 && request.getParameter("senha").equals(request.getParameter("senhaRepitida"))) {
+
                 registro.setUsername(request.getParameter("username"));
                 registro.setNome(request.getParameter("nome"));
                 registro.setEmail(request.getParameter("email"));
                 registro.setCrm(request.getParameter("crm"));
                 registro.setEspecializacao(request.getParameter("especializacao"));
                 registro.setSenha(request.getParameter("senha"));
+                registroDAO.registrarMedicos(registro);
+                response.sendRedirect("login.jsp");
 
-                if (registro.getUsername().length() >= 6 && registro.getEmail().length() >= 6 && registro.getSenha().length() >= 6 && registro.getSenha().equals(request.getParameter("senhaRepitida"))) {
-
-                    registroDAO.registrarMedicos(registro);
-                    response.sendRedirect("login.jsp");
-
-                } else {
-                    response.sendRedirect("registros.jsp");
-                }
+            } else {
+                
+                response.sendRedirect("registros.jsp");
             }
 
         } catch (Exception erro) {
-            response.sendRedirect("registros.jsp");
             System.out.println("ERRO NO REGISTRAMENTO DE USUÁRIOS: " + erro.getMessage());
         }
     }
-
 }

@@ -10,6 +10,8 @@
         <title>JPG | Sobre</title>
         <link rel="stylesheet" type="text/css" href="lib/css/sobre.css">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
+        <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <%
         String usuario = (String) session.getAttribute("username");
@@ -19,6 +21,8 @@
         }
     %>
     <body>
+        <br><br>
+        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: white; font-size: 30px;"></i></a>
         <nav class="nav_tabs">
             <ul>
                 <li>
@@ -64,8 +68,5 @@
                 </li>
             </ul>
         </nav>
-        <div class="container">
-            <a href="index.jsp"><button class="btn-5">Dashboard</button></a>
-        </div>
     </body>
 </html>

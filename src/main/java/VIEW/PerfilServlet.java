@@ -1,10 +1,9 @@
 package VIEW;
 
-import DAO.ConnectionFactory;
+import DAO.RegistrosDAO;
+import MODEL.Registros;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,7 +15,6 @@ import javax.servlet.http.HttpSession;
  *
  * @author JPG
  */
-
 @WebServlet(name = "PerfilServlet", urlPatterns = {"/PerfilServlet"})
 public class PerfilServlet extends HttpServlet {
 
@@ -24,25 +22,30 @@ public class PerfilServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        try {
-            HttpSession session = request.getSession();
-            String usuario = (String) session.getAttribute("usuario");
-            if (usuario == null) {
-                response.sendRedirect("login.jsp");
-            }
-            String user = usuario;
-            Connection conexao = new ConnectionFactory().getConexao();
-            Statement statement;
-            ResultSet resultSet;
+        HttpSession session = request.getSession();
+        String usuario = (String) session.getAttribute("username");
 
-            String sql = "SELECT nome, email, id FROM registros WHERE usuario = '" + user + "'";
-            statement = conexao.createStatement();
-            statement = conexao.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.TYPE_FORWARD_ONLY);
-            resultSet = statement.executeQuery(sql);
-            resultSet.first();
+        if (usuario == null) {
+            response.sendRedirect("login.jsp");
+        }
+
+        try {
+            
+            RegistrosDAO registroDAO = new RegistrosDAO();
+            ArrayList<Registros> lista = registroDAO.exibePerfil(usuario);
+
+            for (Registros l : lista) {
+                System.out.println(l.getUsername());
+                System.out.println(l.getNome());
+                System.out.println(l.getEmail());
+                System.out.println(l.getCrm());
+                System.out.println(l.getEspecializacao());
+                request.setAttribute("dados", lista);
+                request.getRequestDispatcher("perfil.jsp").forward(request, response);
+            }
 
         } catch (Exception erro) {
-            System.out.println("ERRO AO VISUALIZAR PERFIL DE USUÁRIO: " + erro.getMessage());
+            System.out.println("ERRO AO VISUALIZAR PERFIL: " + erro.getMessage());
         }
     }
 

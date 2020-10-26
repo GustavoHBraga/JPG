@@ -46,28 +46,30 @@ public class AlteraPerfilServlet extends HttpServlet {
             resultSet = statement.executeQuery(sql);
             resultSet.first();
 
-            registro.setUsername(request.getParameter("username"));
-            registro.setNome(request.getParameter("nome"));
-            registro.setEmail(request.getParameter("email"));
-            registro.setCrm(request.getParameter("crm"));
-            registro.setEspecializacao(request.getParameter("especializacao"));
-            registro.setSenha(request.getParameter("senhaNova"));
-            registro.setId_user(Integer.parseInt(resultSet.getString("id")));
+            if (request.getParameter("username").equals("") || request.getParameter("nome").equals("") || request.getParameter("email").equals("") || request.getParameter("crm").equals("") || request.getParameter("especializacao").equals("") || request.getParameter("senhaNova").equals("") || request.getParameter("senhaRepitida").equals("")) {
 
-            if (request.getParameter("username").length() >= 6 && request.getParameter("email").length() >= 6 && request.getParameter("senhaNova").length() >= 6 && request.getParameter("senhaNova").equals(request.getParameter("senhaRepitida"))) {
+                response.sendRedirect("altera_perfil.jsp");
 
+            } else if (request.getParameter("username").length() >= 6 && request.getParameter("email").length() >= 6 && request.getParameter("senhaNova").length() >= 6 && request.getParameter("senhaNova").equals(request.getParameter("senhaRepitida"))) {
+
+                registro.setUsername(request.getParameter("username"));
+                registro.setNome(request.getParameter("nome"));
+                registro.setEmail(request.getParameter("email"));
+                registro.setCrm(request.getParameter("crm"));
+                registro.setEspecializacao(request.getParameter("especializacao"));
+                registro.setSenha(request.getParameter("senhaNova"));
+                registro.setIdUser(Integer.parseInt(resultSet.getString("id")));
                 registroDAO.alteraPerfil(registro);
-                response.sendRedirect("logoff.jsp");
+                response.sendRedirect("LogoffServlet");
 
             } else {
+
                 response.sendRedirect("altera_perfil.jsp");
             }
 
         } catch (Exception erro) {
-            response.sendRedirect("altera_perfil.jsp");
-            System.out.println("ERRO Na ALTERAÇÃO DE PERFIL: " + erro.getMessage());
+            throw new RuntimeException("ERRO NO REGISTRAMENTO DE ATIVIDADES: " + erro.getMessage());
 
         }
     }
-
 }
