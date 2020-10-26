@@ -44,41 +44,6 @@ public class NoticiasDAO {
         }
     }
 
-    public void alterarNoticias(Noticias noticia) {
-
-        String sql = "UPDATE noticias SET titulo = ?, mensagem = ?, data = ? WHERE id = ?";
-
-        try {
-
-            preparedStatement = conexao.prepareStatement(sql);
-            preparedStatement.setString(1, noticia.getTitulo());
-            preparedStatement.setString(2, noticia.getMensagem());
-            preparedStatement.setDate(3, (Date) noticia.getData());
-            preparedStatement.setInt(5, noticia.getIdNoticias());
-            preparedStatement.execute();
-            preparedStatement.close();
-
-        } catch (Exception erro) {
-            throw new RuntimeException("ERRO NA ALTERAÇÃO DE NOTÍCIAS: " + erro.getMessage());
-        }
-
-    }
-
-    public void removerNoticias(int id) {
-
-        String sql = "DELETE FROM noticias WHERE id = " + id;
-
-        try {
-
-            statement = conexao.createStatement();
-            statement.execute(sql);
-            statement.close();
-
-        } catch (Exception erro) {
-            throw new RuntimeException("ERRO NA REMOÇÃO DE NOTÍCIAS: " + erro.getMessage());
-        }
-    }
-
     public ArrayList<Noticias> listarNoticias() {
 
         String sql = "SELECT * FROM noticias";
