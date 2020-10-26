@@ -55,5 +55,4 @@ public class Noticias {
         this.data = data;
     }
     
-    
 }
