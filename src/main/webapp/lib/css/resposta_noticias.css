@@ -1,0 +1,162 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+body {
+  background: #2c3338;
+  font-family: 'Candara';
+}
+
+h6{
+  text-align: center;
+  font-family: 'Candara';
+  font-size: 15px;
+}
+
+.login {
+  width: 400px;
+  margin: 16px auto;
+  font-size: 16px;
+}
+
+.login-header,
+.login p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.login-triangle {
+  width: 0;
+  margin-right: auto;
+  margin-left: auto;
+  border: 12px solid transparent;
+  border-bottom-color: #4E5066;
+}
+
+.login-header {
+  background: #4E5066;
+  padding: 20px;
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Candara';
+  color: #fff;
+}
+
+.login-container {
+  background: #ebebeb;
+  padding: 12px;
+  font-family: 'Candara';
+}
+
+.login p {
+  padding: 12px;
+}
+
+.login input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  padding: 16px;
+  outline: 0;
+  font-family: inherit;
+  font-size: 0.95em;
+  font-family: 'Candara';
+  border-radius: 20px;
+}
+
+.login input[type="email"],
+.login input[type="text"],
+.login input[type="password"] {
+  background: #fff;
+  border-color: #bbb;
+  color: #555;
+}
+
+.login input[type="email"]:focus,
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+  border-color: #888;
+}
+
+.login input[type="submit"] {
+  background: teal;
+  border-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+.login input[type="submit"]:hover {
+  background: teal;
+}
+
+.login input[type="submit"]:focus {
+  border-color: #05a;
+}
+
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+        -webkit-tap-highlight-color: transparent;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    background: none;
+    border: 2px solid #2c3338;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+
+span, svg {
+    position: absolute;
+    color: #2c3338;
+    fill: transparent;
+}
+
+button:hover {
+    font-size: 14px;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid transparent;
+    width: 50px;
+    border-left: 2px solid #2c3338;
+    border-bottom: 2px solid #2c3338;
+    animation: spin 2s 500ms forwards;
+}
+
+button:focus span {
+    color: transparent;
+}
+
+button:focus svg {
+    animation: check 500ms 2300ms forwards;
+}
+
+@keyframes spin {
+    80%{border: 2px solid transparent;
+            border-left: 2px solid #2c3338;}
+    100%{transform: rotate(1080deg);
+        border: 2px solid #2c3338;}
+}
+
+@keyframes check {
+    to{fill: #2c3338}
+}
+
+@keyframes circle {
+    to{border: 2px solid #2c3338;}
+}

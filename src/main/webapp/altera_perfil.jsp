@@ -37,7 +37,7 @@
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
-                    <input id="login__username" type="text" name="email" class="form__input" placeholder="Novo e-mail *" required>
+                    <input id="login__username" type="email" name="email" class="form__input" placeholder="Novo e-mail *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
