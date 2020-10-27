@@ -4,6 +4,18 @@
   margin-bottom: var(--rTitleMarginBottom, 0) !important;
 }
 
+h3{
+    text-align: center;
+    color: white;
+    font-family: Candara;
+    font-size: 30px;
+}
+
+h4{
+    font-family: Candara;
+    color: #2c3338;
+}
+
 p:not([class]){
   line-height: var(--cssTypographyLineHeight, 1.78);
   margin-top: var(--cssTypographyBasicMargin, 1em);
@@ -73,7 +85,7 @@ p:not([class]):first-child{
 
 .timeline{
   --uiTimelineMainColor: var(--timelineMainColor, #222);
-  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #fff);
+  --uiTimelineSecondaryColor: var(--timelineSecondaryColor, #2c3338);
 
   border-left: var(--timelineLineWidth, 3px) solid var(--timelineLineBackgroundColor, var(--uiTimelineMainColor));
   padding-top: 1rem;
@@ -111,7 +123,7 @@ p:not([class]):first-child{
 }
 
 .timeline{
-  --timelineMainColor: #4E5066;
+  --timelineMainColor: #ccc;
 }
 
 body{

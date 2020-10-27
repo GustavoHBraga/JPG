@@ -37,7 +37,7 @@
                     <ul>
                         <li><a href="PerfilServlet">Olá&nbsp;<c:out value="${sessionScope.username}"></c:out></a></li>
                         <li><a href="#">Triagens</a></li>
-                        <li><a href="noticias.jsp">Notícias</a></li>
+                        <li><a href="NoticiasServlet">Notícias</a></li>
                         <li><a href="AtividadesServlet">Atividades</a></li>
                         <li><a href="sobre.jsp">Sobre</a></li>
                         <li><a href="LogoffServlet">Logoff</a></li>

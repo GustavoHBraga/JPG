@@ -1,7 +1,7 @@
 package VIEW;
 
-import DAO.AtividadesDAO;
-import MODEL.Atividades;
+import DAO.NoticiasDAO;
+import MODEL.Noticias;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.ServletException;
@@ -15,13 +15,13 @@ import javax.servlet.http.HttpSession;
  *
  * @author JPG
  */
-@WebServlet(name = "AtividadesServlet", urlPatterns = {"/AtividadesServlet"})
-public class AtividadesServlet extends HttpServlet {
+@WebServlet(name = "NoticiasServlet", urlPatterns = {"/NoticiasServlet"})
+public class NoticiasServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
         //*********
         //Corrigir caracteres especiais da tabela
         request.setCharacterEncoding("UTF-8");
@@ -36,42 +36,43 @@ public class AtividadesServlet extends HttpServlet {
 
         try {
 
-            AtividadesDAO atividadesDAO = new AtividadesDAO();
+            NoticiasDAO noticiasDAO = new NoticiasDAO();
 
             if (request.getParameter("mensagem") == null || request.getParameter("mensagem").equals("")) {
 
-                ArrayList<Atividades> lista = atividadesDAO.listarAtividades(usuario);
+                ArrayList<Noticias> lista = noticiasDAO.listarNoticias();
 
-                for (Atividades l : lista) {
-                    System.out.println(l.getIdAtividade());
+                for (Noticias l : lista) {
+                    System.out.println(l.getIdNoticias());
+                    System.out.println(l.getUsernameMedico());
                     System.out.println(l.getTitulo());
                     System.out.println(l.getMensagem());
                     System.out.println(l.getData());
-                    System.out.println(l.getStatus());
                     request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("atividades.jsp").forward(request, response);
+                    request.getRequestDispatcher("noticias.jsp").forward(request, response);
                 }
 
             } else {
-                ArrayList<Atividades> lista = atividadesDAO.pesquisaAtividades(request.getParameter("mensagem"));
+                ArrayList<Noticias> lista = noticiasDAO.pesquisaNoticias(request.getParameter("mensagem"));
 
-                for (Atividades l : lista) {
-                    System.out.println(l.getIdAtividade());
+                for (Noticias l : lista) {
+                    System.out.println(l.getIdNoticias());
+                    System.out.println(l.getUsernameMedico());
                     System.out.println(l.getTitulo());
                     System.out.println(l.getMensagem());
                     System.out.println(l.getData());
-                    System.out.println(l.getStatus());
                     request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("atividades.jsp").forward(request, response);
+                    request.getRequestDispatcher("noticias.jsp").forward(request, response);
                 }
             }
             
-            response.sendRedirect("atividades.jsp");
+            response.sendRedirect("noticias.jsp");
             
         } catch (Exception erro) {
             
-            throw new RuntimeException("ERRO NA LISTAGEM DE ATIVIDADES: " + erro.getMessage());
+            throw new RuntimeException("ERRO NA LISTAGEM DE NOTÍCIAS: " + erro.getMessage());
         }
+        
     }
 
 }

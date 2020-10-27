@@ -8,6 +8,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+h3{
+    text-align: center;
+    color: white;
+    font-family: Candara;
+    font-size: 30px;
+}
+
 div.table-title {
    display: block;
   margin: auto;

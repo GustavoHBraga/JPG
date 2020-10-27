@@ -59,11 +59,11 @@
                     <input type="radio" name="tabs" class="rd_tab" id="tab4">
                     <label for="tab4" class="tab_label">Equipe</label>
                     <div class="tab-content">
-                        <h2>&#10146; Miguel Castro<br></h2>
-                        <h2>&#10146; Gustavo Braga<br></h2>
-                        <h2>&#10146; Gabriel Max<br></h2>
-                        <h2>&#10146; Pedro Arantes<br></h2>
-                        <h2>&#10146; Jefferson Ouro<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Miguel Castro<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Gustavo Braga<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Gabriel Max<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Pedro Arantes<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Jefferson Ouro<br></h2>
                     </div>
                 </li>
             </ul>

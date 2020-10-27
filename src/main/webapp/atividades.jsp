@@ -10,8 +10,8 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="lib/css/atividades.css">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
+        <link rel="stylesheet" type="text/css" href="lib/css/atividadesSearch.css">
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
-        
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
         <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -27,26 +27,16 @@
         <br><br>
         <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: white; font-size: 30px;"></i></a>
         <br><br><br><br>
-        <div class="table-title">
-            <h3>Atividades</h3>
+        <h3>ATIVIDADES</h3>
             <br>
+        <div class="table-title">
             <form action="AtividadesServlet" name="busca">
-                <a href="javascript:busca.submit()"><i class="fa fa-search" style="color: white; font-size: 25px;"></i></a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="javascript:busca.submit()"><i class="fa fa-refresh" style="color: white; font-size: 25px;"></i></a>
-                <input type="text" class="form-contact-input" name="mensagem" maxlength="50" placeholder="Busca por mensagem..."/>
+            <div class="search-box">
+                <input class="search-txt" type="text" name="mensagem" class="text" maxlength="50" placeholder="Busca por mensagem..."/>
+                <a class="search-btn" href="javascript:busca.submit()"><i class="fa fa-search"></i></a>
+            </div>
             </form>
+            <br><br><br><br>
         </div>
         <table class="table-fill">
             <thead>
@@ -59,7 +49,7 @@
                 </tr>
             </thead>
             <tbody class="table-hover">
-                
+
                 <c:forEach items="${dados}" var="l">
                     <tr>
                         <td class="text-left" hidden><c:out value="${l.getIdAtividade()}"/></td>
