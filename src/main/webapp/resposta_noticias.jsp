@@ -23,8 +23,8 @@
 
             <form action="RespostaNoticiaServlet" class="login-container">
                 <p>De quem virá a Resposta ?</p>
-                <p><input type="email" name="meuEmail" placeholder="E-mail *" required></p>
-                <p><input type="password" name="minhaSenhaEmail" placeholder="Senha do E-mail *" required></p>
+                <p><input type="email" name="meuEmail" placeholder="G-mail *" required></p>
+                <p><input type="password" name="minhaSenhaEmail" placeholder="Senha do G-mail *" required></p>
                 <p>Para quem irá a resposta ?</p>
                 <p><input type="text" name="paraEmail" placeholder="Para *" required></p>
                 <p><input type="text" name="assunto" placeholder="Assunto *" required></p>
@@ -40,7 +40,14 @@
                 <center>
                     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
                     <a href="#" onclick="swal('Encaminhe a notícia selecionada em caso de dúvidas ou críticas sobre o assunto, e a encaminhe a um determinado trabalhista da instituição.\n\
-                Lembre-se sempre de preencher os campos corretamente.');"><i class="fa fa-commenting" style="color: #4E5066; font-size: 20px;"></i></a>
+                \n\
+                Preecha no campo de G-mail, apenas e-mails com extensão G-mail. Ex.: usuario@gmail...\n\
+                \n\
+                Lembre-se sempre de preencher os campos corretamente.\n\
+                \n\
+                Informamos também que, não iremos violar de forma alguma os dados pessoais informados para envio.\n\
+                \n\
+                Caso queira saber mais sobre os Termos de Uso entre em contato com a Auditoria Interna da instituição JPG.');"><i class="fa fa-commenting" style="color: #4E5066; font-size: 20px;"></i></a>
                 </center>
             </form>
         </div>

@@ -59,7 +59,7 @@
                     <th class="text-left">mensagem</th>
                     <th class="text-left">previsão</th>
                     <th class="text-left">status</th>
-                    <th class="text-left">ações</th>
+                    <th class="text-left">interações</th>
                 </tr>
             </thead>
             <tbody class="table-hover">
@@ -71,7 +71,7 @@
                         <td class="text-left"><c:out value="${l.getMensagem()}"/></td>
                         <td class="text-left"><fmt:formatDate pattern="dd/MM/yyyy" value="${l.getData()}"/></td>
                         <td class="text-left"><c:out value="${l.getStatus()}"/></td>
-                        <td class="text-left"><a href="altera_atividade.jsp?id=<c:out value="${l.getIdAtividade()}"/>&titulo=<c:out value="${l.getTitulo()}"/>&mensagem=<c:out value="${l.getMensagem()}"/>&data=<c:out value="${l.getData()}"/>&status=<c:out value="${l.getStatus()}"/>"><i class="fa fa-edit" style="color: orange; font-size: 30px;"></i></a>&nbsp;&nbsp;<a href="RemoveAtividadeServlet?id=<c:out value="${l.getIdAtividade()}"/>"<i class="fa fa-trash" style="color: salmon; font-size: 30px;"></i></a></td>
+                        <td class="text-left"><a href="altera_atividade.jsp?id=<c:out value="${l.getIdAtividade()}"/>&titulo=<c:out value="${l.getTitulo()}"/>&mensagem=<c:out value="${l.getMensagem()}"/>&data=<c:out value="${l.getData()}"/>&status=<c:out value="${l.getStatus()}"/>"><i class="fa fa-edit" style="color: orange; font-size: 30px;"></i></a>&nbsp;&nbsp;<a href="RemoveAtividadeServlet?id=<c:out value="${l.getIdAtividade()}"/>"<i class="fa fa-trash" style="color: salmon; font-size: 30px;"></i></a>&nbsp;&nbsp;&nbsp;<a href="PDFAtividadesServlet?titulo=<c:out value="${l.getTitulo()}"/>&mensagem=<c:out value="${l.getMensagem()}"/>&data=<c:out value="${l.getData()}"/>&status=<c:out value="${l.getStatus()}"/>"><i class="fa fa-file-pdf-o" style="color: teal; font-size: 28px;"></i></a></td>
                     </tr>
                 </c:forEach>
             </tbody>

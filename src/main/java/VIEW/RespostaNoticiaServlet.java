@@ -42,7 +42,7 @@ public class RespostaNoticiaServlet extends HttpServlet {
             response.sendRedirect("NoticiasServlet");
 
         } catch (Exception erro) {
-            response.sendRedirect("NoticiasServlet");//tratar erro caso as credencias forem invalidas
+            response.sendRedirect("NoticiasServlet");
             System.out.println("HOUVE UM ERRO AO ENVIAR E-MAIL: " + erro.getMessage());
         }
     }
