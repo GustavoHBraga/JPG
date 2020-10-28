@@ -37,9 +37,25 @@ public class PDFAtividadesServlet extends HttpServlet {
             documento.setPageSize(PageSize.A4);
                        
             documento.add(new Paragraph(request.getParameter("data")));
+            documento.add(new Paragraph("\n"));
+            documento.add(new Paragraph("\n"));
+            documento.add(new Paragraph("\n"));
+            documento.add(new Paragraph("TÍTULO:"));
+            documento.add(new Paragraph("------------------------------------------------------------------------------------------------------------------------------"));
             documento.add(new Paragraph(request.getParameter("titulo")));
+            documento.add(new Paragraph("------------------------------------------------------------------------------------------------------------------------------"));
+            documento.add(new Paragraph("\n"));
+            documento.add(new Paragraph("\n"));
+            documento.add(new Paragraph("MENSAGEM:"));
+            documento.add(new Paragraph("------------------------------------------------------------------------------------------------------------------------------"));
             documento.add(new Paragraph(request.getParameter("mensagem")));
+            documento.add(new Paragraph("------------------------------------------------------------------------------------------------------------------------------"));
+            documento.add(new Paragraph("\n"));
+            documento.add(new Paragraph("\n"));
+            documento.add(new Paragraph("STATUS:"));
+            documento.add(new Paragraph("------------------------------------------------------------------------------------------------------------------------------"));
             documento.add(new Paragraph(request.getParameter("status")));
+            documento.add(new Paragraph("------------------------------------------------------------------------------------------------------------------------------"));
             
             
             
