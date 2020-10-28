@@ -14,7 +14,7 @@
     </head>
     <body>
         <br><br>
-        <a href="index.jsp" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: white; font-size: 30px;"></i></a>
+        <a href="index.jsp" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #4E5066; font-size: 30px;"></i></a>
         <br><br><br>
         <div class="login">
             <div class="login-triangle"></div>

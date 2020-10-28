@@ -43,7 +43,7 @@
         </div>
         <br>
         <div class="cancel">
-            <a href="index.jsp" style="color: white">Dashboard</a>
+            <a href="index.jsp" style="color: #4E5066">Dashboard</a>
         </div>
     </body>
 </html>

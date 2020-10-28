@@ -65,7 +65,7 @@
 :root {
   --htmlFontSize: 100%;
 
-  --bodyBackgroundColor: #2c3338;
+  --bodyBackgroundColor: #B0E0E6;
   --bodyColor: var(--baseColor);
   --bodyFontFamily: 'Open Sans';
   --bodyFontFamilyFallback: sans-serif;
@@ -85,7 +85,7 @@ html {
 }
 
 body {
-  background-color: var(--bodyBackgroundColor);
+  background-color: #B0E0E6;
   color: var(--bodyColor);
   font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
   font-size: var(--bodyFontSize);
@@ -111,6 +111,7 @@ a {
 a:focus,
 a:hover {
   text-decoration: underline;
+  color: #4E5066;
 }
 
 
@@ -159,14 +160,14 @@ input[type='submit'] {
   --loginBorderRadus: 0.25rem;
   --loginColor: #eee;
 
-  --loginInputBackgroundColor: #3b4148;
-  --loginInputHoverBackgroundColor: #434a52;
+  --loginInputBackgroundColor: #4E5066;
+  --loginInputHoverBackgroundColor: #4E5066;
 
-  --loginLabelBackgroundColor: #363b41;
+  --loginLabelBackgroundColor: #4E5066;
 
-  --loginSubmitBackgroundColor: #eee;
-  --loginSubmitColor: #606468;
-  --loginSubmitHoverBackgroundColor: #eee;
+  --loginSubmitBackgroundColor: #fff;
+  --loginSubmitColor: #4E5066;
+  --loginSubmitHoverBackgroundColor: #fff;
 }
 
 .login {
@@ -229,4 +230,8 @@ p {
 
 .text--center {
   text-align: center;
+}
+
+::-webkit-input-placeholder {
+   color: #ccc;
 }

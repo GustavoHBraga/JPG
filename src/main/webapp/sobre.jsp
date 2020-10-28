@@ -22,12 +22,12 @@
     %>
     <body>
         <br><br>
-        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: white; font-size: 30px;"></i></a>
+        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #fff; font-size: 30px;"></i></a>
         <nav class="nav_tabs">
             <ul>
                 <li>
                     <input type="radio" id="tab1" class="rd_tab" name="tabs" checked>
-                    <label for="tab1" class="tab_label">Sobre</label>
+                    <label for="tab1" class="tab_label"><b>Sobre</b></label>
                     <div class="tab-content">
                         <h2>Quem somos ?</h2>
                         <article>
@@ -37,7 +37,7 @@
                 </li>
                 <li>
                     <input type="radio" name="tabs" class="rd_tab" id="tab2">
-                    <label for="tab2" class="tab_label">Serviços</label>
+                    <label for="tab2" class="tab_label"><b>Serviços</b></label>
                     <div class="tab-content">
                         <h2>Oque fazemos ?</h2>
                         <article>
@@ -47,7 +47,7 @@
                 </li>
                 <li>
                     <input type="radio" name="tabs" class="rd_tab" id="tab3">
-                    <label for="tab3" class="tab_label">{Desenv.}</label>
+                    <label for="tab3" class="tab_label"><b>{Desenv.}</b></label>
                     <div class="tab-content">
                         <h2>Como fazemos ?</h2>
                         <article>
@@ -57,7 +57,7 @@
                 </li>
                 <li>
                     <input type="radio" name="tabs" class="rd_tab" id="tab4">
-                    <label for="tab4" class="tab_label">Equipe</label>
+                    <label for="tab4" class="tab_label"><b>Equipe</b></label>
                     <div class="tab-content">
                         <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Miguel Castro<br></h2>
                         <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Gustavo Braga<br></h2>

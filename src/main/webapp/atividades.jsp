@@ -25,7 +25,7 @@
     %>
     <body>
         <br><br>
-        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: white; font-size: 30px;"></i></a>
+        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #4E5066; font-size: 30px;"></i></a>
         <br><br><br><br>
         <h3>ATIVIDADES</h3>
             <br>
@@ -49,7 +49,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="AtividadesServlet"><i class="fa fa-refresh" style="color: #ccc; font-size: 30px;"></i></a>
+            <a href="AtividadesServlet"><i class="fa fa-refresh" style="color: #4E5066; font-size: 30px;"></i></a>
             <br><br><br><br>
         </div>
         <table class="table-fill">
@@ -71,7 +71,7 @@
                         <td class="text-left"><c:out value="${l.getMensagem()}"/></td>
                         <td class="text-left"><fmt:formatDate pattern="dd/MM/yyyy" value="${l.getData()}"/></td>
                         <td class="text-left"><c:out value="${l.getStatus()}"/></td>
-                        <td class="text-left"><a href="altera_atividade.jsp?id=<c:out value="${l.getIdAtividade()}"/>&titulo=<c:out value="${l.getTitulo()}"/>&mensagem=<c:out value="${l.getMensagem()}"/>&data=<c:out value="${l.getData()}"/>&status=<c:out value="${l.getStatus()}"/>"><i class="fa fa-edit" style="color: orange; font-size: 30px;"></i></a>&nbsp;&nbsp;<a href="RemoveAtividadeServlet?id=<c:out value="${l.getIdAtividade()}"/>"<i class="fa fa-trash" style="color: salmon; font-size: 30px;"></i></a>&nbsp;&nbsp;&nbsp;<a href="PDFAtividadesServlet?titulo=<c:out value="${l.getTitulo()}"/>&mensagem=<c:out value="${l.getMensagem()}"/>&data=<c:out value="${l.getData()}"/>&status=<c:out value="${l.getStatus()}"/>"><i class="fa fa-file-pdf-o" style="color: teal; font-size: 28px;"></i></a></td>
+                        <td class="text-left"><a href="altera_atividade.jsp?id=<c:out value="${l.getIdAtividade()}"/>&titulo=<c:out value="${l.getTitulo()}"/>&mensagem=<c:out value="${l.getMensagem()}"/>&data=<c:out value="${l.getData()}"/>&status=<c:out value="${l.getStatus()}"/>"><i class="fa fa-edit" style="color: orange; font-size: 30px;"></i>&nbsp;&nbsp;&nbsp;<a href="PDFAtividadesServlet?titulo=<c:out value="${l.getTitulo()}"/>&mensagem=<c:out value="${l.getMensagem()}"/>&data=<c:out value="${l.getData()}"/>&status=<c:out value="${l.getStatus()}"/>"><i class="fa fa-file-pdf-o" style="color: teal; font-size: 28px;"></i></a></a>&nbsp;&nbsp;<a href="RemoveAtividadeServlet?id=<c:out value="${l.getIdAtividade()}"/>"<i class="fa fa-trash" style="color: salmon; font-size: 30px;"></i></a></td>
                     </tr>
                 </c:forEach>
             </tbody>

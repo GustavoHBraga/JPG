@@ -1,10 +1,10 @@
 body{
-  background-color: #2c3338;
+  background-color: #B0E0E6;
 }
 
 .cancel{
     text-align: center;
-    font-family: "Arial";
+    font-family: "Candara";
     font-size: 15px;
 }
 
@@ -25,7 +25,7 @@ body{
 
 .form-contact-input {
   width: 100%;
-  color: #292929;
+  color: #4E5066;
   font-size: 18px;
   background-color: #E9E9E9;
   border: 1px solid #E9E9E9;

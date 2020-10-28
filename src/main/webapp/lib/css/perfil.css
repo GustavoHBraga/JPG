@@ -1,8 +1,8 @@
 body{
 	margin: 0;
 	padding: 0;
-	color: #2c3338;
-	background: #2c3338;
+	color: #4E5066;
+	background: #B0E0E6;
 	font-family: Candara;
 }
 
@@ -32,7 +32,7 @@ p{
 
 .cancel{
     text-align: center;
-    font-family: "Arial";
+    font-family: "Candara";
     font-size: 15px;
 }
 

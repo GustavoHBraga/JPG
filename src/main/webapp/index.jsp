@@ -20,7 +20,7 @@
             response.sendRedirect("login.jsp");
         }
     %>
-    <body background="lib/img/background.jpg">
+    <body>
         <div class="container">
             <nav>
                 <input type="checkbox" id="nav" class="hidden">
@@ -52,11 +52,11 @@
             }
         </style>
         <br><br><br><br><br><br><br>
-        <h1>&nbsp;&nbsp;O Coronavírus</h1>
+        <h1 style="color: #4E5066">&nbsp;&nbsp;O Coronavírus</h1>
 
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;Coronavírus é uma família de vírus que causam infecções</p>  
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;respiratórias. O novo agente do coronavírus (nCoV-2019)</p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;foi descoberto em 31/12/19 após casos registrados na China.</p> 
+        <p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;Coronavírus é uma família de vírus que causam infecções</p>  
+        <p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;respiratórias. O novo agente do coronavírus (nCoV-2019)</p>
+        <p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;foi descoberto em 31/12/19 após casos registrados na China.</p> 
 
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -75,7 +75,7 @@
         - maçanetas;\n\
         - brinquedos;\n\
         - teclados de computador etc...');">
-            <b><i class="fa fa-bar-chart" style="color: teal; font-size: 20px;"></i>&nbsp;&nbsp;Como é transmitido ?</b></a>
+            <b style="color: #4E5066"><i class="fa fa-bar-chart" style="color: #4E5066; font-size: 20px;"></i>&nbsp;&nbsp;Como é transmitido ?</b></a>
 
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -93,7 +93,7 @@
         - Cansaço (astenia);\n\
         - Diminuição do apetite (hiporexia);\n\
         - Dispnéia ( falta de ar);');">
-            <b><i class="fa fa-stethoscope" style="color: teal; font-size: 25px;"></i>&nbsp;&nbsp;Quais são os sintomas ?</b></a>
+            <b style="color: #4E5066"><i class="fa fa-stethoscope" style="color: #4E5066; font-size: 25px;"></i>&nbsp;&nbsp;Quais são os sintomas ?</b></a>
 
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -104,7 +104,7 @@
         - Ao tossir ou espirrar, cubra nariz e boca com lenço ou com a parte interna do cotovelo. Não tocar olhos, nariz, boca ou a máscara de proteção fácil com as mãos não higienizadas. Se tocar olhos, nariz, boca ou a máscara, higienize sempre as mãos como já indicado.\n\
         \n\
         - Mantenha distância mínima de 1 (um) metro entre pessoas em lugares públicos e de convívio social. Evite abraços, beijos e apertos de mãos. Adote um comportamento amigável sem contato físico, mas sempre com um sorriso no rosto.');">
-            <b><i class="fa fa-street-view" style="color: teal; font-size: 25px;"></i>&nbsp;&nbsp;Como se proteger ?</b></a>
+            <b style="color: #4E5066"><i class="fa fa-street-view" style="color: #4E5066; font-size: 25px;"></i>&nbsp;&nbsp;Como se proteger ?</b></a>
 
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -119,7 +119,7 @@
         - Reforçar os hábitos de higiene e proteção como a utilização de máscara, higienização das mãos com água e sabão ou com álcool em gel 70 %.\n\
         \n\
         - Caso apresente sintomas de gripe, busque atendimento nos serviços de saúde, e evite contato com outras pessoas.');">
-            <b><i class="fa fa-group" style="color: teal; font-size: 21px;"></i>&nbsp;&nbsp;Como estimular outras pessoas ?</b></a>
+            <b style="color: #4E5066"><i class="fa fa-group" style="color: #4E5066; font-size: 21px;"></i>&nbsp;&nbsp;Como estimular outras pessoas ?</b></a>
 
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -128,12 +128,12 @@
         Também é possível ser consultado pela plataforma JPG, onde médicos profíssionais estarão aptos e disponíveis para o atendimento.\n\
         \n\
         UTILIZE MÁSCARA O TEMPO TODO.');">
-            <b><i class="fa fa-user-md" style="color: teal; font-size: 25px;"></i>&nbsp;&nbsp;Se eu ficar doente ?</b></a>
+            <b style="color: #4E5066"><i class="fa fa-user-md" style="color: #4E5066; font-size: 25px;"></i>&nbsp;&nbsp;Se eu ficar doente ?</b></a>
 
         <br><br><br><br>
         &nbsp;&nbsp;
         <iframe src="https://player.vimeo.com/video/447264182" width="450" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <br>
-        <i>&nbsp;&nbsp;&nbsp;#NALINHADEFRENTE</i>
+        <i style="color: #4E5066">&nbsp;&nbsp;&nbsp;#NALINHADEFRENTE</i>
     </body>
 </html>

@@ -35,7 +35,7 @@ public class PDFAtividadesServlet extends HttpServlet {
             documento.open();
             
             documento.setPageSize(PageSize.A4);
-            
+                       
             documento.add(new Paragraph(request.getParameter("data")));
             documento.add(new Paragraph(request.getParameter("titulo")));
             documento.add(new Paragraph(request.getParameter("mensagem")));

@@ -6,14 +6,14 @@ a{
  position: absolute;
  top: 25%;
  left: 30%;
- background: #ccc;
+ background: #4E5066;
  height: 40px;
  border-radius: 40px;
  padding: 10px;
 }
 
 .search-box:hover > .search-btn{
-   background: #ccc;
+   background: #4E5066;
 }
 .search-box:hover > .search-txt{
     width: 240px;
@@ -21,12 +21,12 @@ a{
 
 }
 .search-btn{
-    color: #2c3338;
+    color: #fff;
     float: right;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #ccc;
+    background: #4E5066;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,16 +37,16 @@ a{
     outline: none;
     float: left;
     padding: 0;
-    color: #2c3338;
+    color: #fff;
     font-size: 16px;
     transition: 0.4s;
     border: none;
     line-height: 40px;
     width: 0px;
-    font-family: Candara;
+    font-family: "Candara";
 }
 ::-webkit-input-placeholder {
-   color: #2c3338;
+   color: #ccc;
 }
 
 

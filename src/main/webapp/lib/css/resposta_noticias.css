@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  background: #2c3338;
+  background: #B0E0E6;
   font-family: 'Candara';
 }
 
@@ -45,7 +45,7 @@ h6{
 .login-container {
   background: #ebebeb;
   padding: 12px;
-  font-family: 'Candara';
+  font-family: "Candara";
 }
 
 .login p {
@@ -62,7 +62,7 @@ h6{
   outline: 0;
   font-family: inherit;
   font-size: 0.95em;
-  font-family: 'Candara';
+  font-family: "Candara";
   border-radius: 20px;
 }
 
@@ -121,7 +121,7 @@ button {
 
 span, svg {
     position: absolute;
-    color: #2c3338;
+    color: #4E5066;
     fill: transparent;
 }
 
@@ -133,8 +133,8 @@ button:focus {
     outline: none;
     border: 2px solid transparent;
     width: 50px;
-    border-left: 2px solid #2c3338;
-    border-bottom: 2px solid #2c3338;
+    border-left: 2px solid #4E5066;
+    border-bottom: 2px solid #4E5066;
     animation: spin 2s 500ms forwards;
 }
 
@@ -148,15 +148,15 @@ button:focus svg {
 
 @keyframes spin {
     80%{border: 2px solid transparent;
-            border-left: 2px solid #2c3338;}
+            border-left: 2px solid #4E5066;}
     100%{transform: rotate(1080deg);
-        border: 2px solid #2c3338;}
+        border: 2px solid #4E5066;}
 }
 
 @keyframes check {
-    to{fill: #2c3338}
+    to{fill: #4E5066}
 }
 
 @keyframes circle {
-    to{border: 2px solid #2c3338;}
+    to{border: 2px solid #4E5066;}
 }

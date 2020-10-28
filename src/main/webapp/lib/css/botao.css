@@ -10,9 +10,9 @@ button::after {
 
 button {
   background: none;
-  border: 3px solid #eee;
+  border: 3px solid #4E5066;
   border-radius: 5px;
-  color: #fff;
+  color: #4E5066;
   display: block;
   font-family: Verdana;
   font-size: 1.10em;
@@ -25,14 +25,14 @@ button {
 
 button::before,
 button::after {
-  background: #fff;
+  background: #4E5066;
   content: '';
   position: absolute;
   z-index: -1;
 }
 
 button:hover {
-  color: #2c3338;
+  color: #fff;
 }
 
 
@@ -47,7 +47,7 @@ button:hover {
   left: -35%;
   top: 0;
   transform: skew(50deg);
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   transform-origin: top left;
   width: 0;
 }

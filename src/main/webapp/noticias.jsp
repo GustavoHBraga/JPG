@@ -23,9 +23,9 @@
             response.sendRedirect("login.jsp");
         }
     %>
-    <body>
+    <body style="background-color: #B0E0E6">
         <br><br>
-        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: white; font-size: 30px;"></i></a>
+        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #4E5066; font-size: 30px;"></i></a>
         <br><br><br><br>
         <h3>NOTÍCIAS</h3>
         <br>
@@ -56,7 +56,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="NoticiasServlet"><i class="fa fa-refresh" style="color: #ccc; font-size: 30px;"></i></a>
+            <a href="NoticiasServlet"><i class="fa fa-refresh" style="color: #4E5066; font-size: 30px;"></i></a>
         </form>
         <script src="https://use.fontawesome.com/f295c5c492.js"></script>
         <div class="page">
