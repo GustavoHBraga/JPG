@@ -40,7 +40,7 @@
         </div>
         <br>
         <div class="cancel">
-            <a href="AtividadesServlet" style="color: white">Cancelar</a>
+            <a href="AtividadesServlet" style="color: #fff">Cancelar</a>
         </div>
     </body>
 </html>

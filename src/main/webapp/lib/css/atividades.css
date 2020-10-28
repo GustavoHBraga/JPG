@@ -2,7 +2,7 @@
 
 body {
   background-color: #B0E0E6;
-  font-family: "Candara";
+  font-family: 'Calibri';
   font-size: 16px;
   font-weight: 400;
   text-rendering: optimizeLegibility;
@@ -25,12 +25,12 @@ div.table-title {
 
 label{
     color: #fafafa;
-    font-family: Candara;
+    font-family: 'Calibri';
 }
 
 .form-contact {
   width: 100%;
-  font-family: "Candara";
+  font-family: 'Calibri';
 }
 
 .form-contact-input {
@@ -47,7 +47,7 @@ label{
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
   text-indent: 20px;
-  font-family: "Candara";
+  font-family: 'Calibri';
 }
 
 .table-title h3 {
@@ -55,7 +55,7 @@ label{
    font-size: 30px;
    font-weight: 400;
    font-style:normal;
-   font-family: "Verdana";
+   font-family: 'Calibri';
    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
    text-transform:uppercase;
 }

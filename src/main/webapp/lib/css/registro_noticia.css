@@ -4,7 +4,7 @@ body{
 
 .cancel{
     text-align: center;
-    font-family: "Candara";
+    font-family: 'Calibri';
     font-size: 15px;
 }
 
@@ -20,7 +20,7 @@ body{
 
 .form-contact {
   width: 100%;
-  font-family: "Candara";
+  font-family: 'Calibri';
 }
 
 .form-contact-input {
@@ -37,7 +37,7 @@ body{
   border-bottom: 1px solid #ccc;
   border-left: 1px solid #ccc;
   text-indent: 20px;
-  font-family: "Candara";
+  font-family: 'Calibri';
 }
 
 .form-contact-textarea {
@@ -57,7 +57,7 @@ body{
   padding-top: 16px;
   padding-left: 0;
   padding-right: 0;
-  font-family: "Candara";
+  font-family: 'Calibri';
 }
 
 

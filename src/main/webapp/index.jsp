@@ -54,9 +54,9 @@
         <br><br><br><br><br><br><br>
         <h1 style="color: #4E5066">&nbsp;&nbsp;O Coronavírus</h1>
 
-        <p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;Coronavírus é uma família de vírus que causam infecções</p>  
+        <b><p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;Coronavírus é uma família de vírus que causam infecções</p>  
         <p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;respiratórias. O novo agente do coronavírus (nCoV-2019)</p>
-        <p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;foi descoberto em 31/12/19 após casos registrados na China.</p> 
+        <p style="color: #4E5066">&nbsp;&nbsp;&nbsp;&nbsp;foi descoberto em 31/12/19 após casos registrados na China.</p></b>
 
         <br><br>&nbsp;&nbsp;
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

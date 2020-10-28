@@ -43,7 +43,7 @@ a{
     border: none;
     line-height: 40px;
     width: 0px;
-    font-family: "Candara";
+    font-family: 'Calibri';
 }
 ::-webkit-input-placeholder {
    color: #ccc;
