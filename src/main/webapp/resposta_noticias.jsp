@@ -22,11 +22,10 @@
             <h2 class="login-header">iNFORME:</h2>
 
             <form action="RespostaNoticiaServlet" class="login-container">
-                <p>De quem virá a Resposta ?</p>
-                <p><input type="email" name="meuEmail" placeholder="G-mail *" required></p>
-                <p><input type="password" name="minhaSenhaEmail" placeholder="Senha do G-mail *" required></p>
                 <p>Para quem irá a resposta ?</p>
                 <p><input type="text" name="paraEmail" placeholder="Para *" required></p>
+                <p>Sobre oque se trata ?</p>
+                <p><input type="text" name="nome" placeholder="Nome completo *" required></p>
                 <p><input type="text" name="assunto" placeholder="Assunto *" required></p>
                 <p><input type="text" name="mensagem" placeholder="Mensagem *" required></p>
                 <br>
@@ -40,8 +39,6 @@
                 <center>
                     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
                     <a href="#" onclick="swal('Encaminhe a notícia selecionada em caso de dúvidas ou críticas sobre o assunto, e a encaminhe a um determinado trabalhista da instituição.\n\
-                \n\
-                Preecha no campo de G-mail, apenas e-mails com extensão G-mail. Ex.: usuario@gmail...\n\
                 \n\
                 Lembre-se sempre de preencher os campos corretamente.\n\
                 \n\

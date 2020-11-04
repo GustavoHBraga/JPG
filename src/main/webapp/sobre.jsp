@@ -18,11 +18,12 @@
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
     %>
     <body>
         <br><br>
-        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #fff; font-size: 30px;"></i></a>
+        <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #4E5066; font-size: 30px;"></i></a>
         <nav class="nav_tabs">
             <ul>
                 <li>

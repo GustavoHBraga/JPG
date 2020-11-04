@@ -21,6 +21,7 @@
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
     %>
     <body style="background-color: #B0E0E6">

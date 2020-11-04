@@ -3,10 +3,11 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
         <title>JPG | Registro de notícias</title>
         <link rel="stylesheet" type="text/css" href="lib/css/registro_noticia.css">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
@@ -17,13 +18,14 @@
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
     %>
     <body>
         <br><br><br><br><br><br><br>
         <div class="formulario">
             <form action="InsereNoticiaServlet" class="form-contact" method="post" tabindex="1">
-                <input type="text" hidden class="form-contact-input" value="<%=session.getAttribute("username")%>" name="usernameMedico" maxlength="50" placeholder="Título *" required />
+                <input type="text" hidden class="form-contact-input" value="<c:out value="${sessionScope.username}"></c:out>" name="usernameMedico" maxlength="50" placeholder="Título *" required />
                 <br><br>
                 <input type="text" class="form-contact-input" name="titulo" maxlength="50" placeholder="Título *" required />
                 <br><br>

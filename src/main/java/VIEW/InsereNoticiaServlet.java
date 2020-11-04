@@ -21,7 +21,9 @@ public class InsereNoticiaServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        
+        request.setCharacterEncoding("UTF-8");
         try {
 
             HttpSession session = request.getSession();
@@ -29,6 +31,7 @@ public class InsereNoticiaServlet extends HttpServlet {
 
             if (usuario == null) {
                 response.sendRedirect("login.jsp");
+                return;
             }
 
             Noticias noticia = new Noticias();

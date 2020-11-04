@@ -22,6 +22,7 @@
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
     %>
     <body>

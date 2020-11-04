@@ -32,6 +32,7 @@ public class AlteraAtividadeServlet extends HttpServlet {
 
             if (usuario == null) {
                 response.sendRedirect("login.jsp");
+                return;
             }
 
             if (request.getParameter("titulo").equals("") || request.getParameter("mensagem").equals("") || request.getParameter("data").equals("") || request.getParameter("status").equals("")) {
@@ -45,7 +46,6 @@ public class AlteraAtividadeServlet extends HttpServlet {
                 atividades.setStatus(request.getParameter("status"));
                 atividades.setIdAtividade(Integer.parseInt(request.getParameter("id")));
                 atividadesDAO.alterarAtividades(atividades);
-                
                 response.sendRedirect("AtividadesServlet");
             }
 

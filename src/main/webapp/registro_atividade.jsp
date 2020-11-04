@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
         <title>JPG | Registro de atividades</title>
         <link rel="stylesheet" type="text/css" href="lib/css/registro_atividade.css">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
@@ -17,6 +17,7 @@
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
     %>
     <body>

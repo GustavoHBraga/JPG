@@ -30,6 +30,7 @@ public class AlteraPerfilServlet extends HttpServlet {
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
 
         try {

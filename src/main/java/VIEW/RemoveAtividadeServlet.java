@@ -27,6 +27,7 @@ public class RemoveAtividadeServlet extends HttpServlet {
             
             if (usuario == null) {
                 response.sendRedirect("login.jsp");
+                return;
             }
 
             AtividadesDAO atividadesDAO = new AtividadesDAO();

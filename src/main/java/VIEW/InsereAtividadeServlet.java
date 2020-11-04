@@ -21,6 +21,8 @@ public class InsereAtividadeServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
+        request.setCharacterEncoding("UTF-8");
 
         try {
 
@@ -29,6 +31,7 @@ public class InsereAtividadeServlet extends HttpServlet {
 
             if (usuario == null) {
                 response.sendRedirect("login.jsp");
+                return;
             }
 
             Atividades atividade = new Atividades();

@@ -20,9 +20,10 @@ public class RespostaNoticiaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String meuEmail = request.getParameter("meuEmail");
-        String minhaSenha = request.getParameter("minhaSenhaEmail");
+        String meuEmail = "JPG.informe@gmail.com";
+        String minhaSenha = "JPG@1234";
         String paraEmail = request.getParameter("paraEmail");
+        String nome = request.getParameter("nome");
         String assunto = request.getParameter("assunto");
         String mensagem = request.getParameter("mensagem");
 
@@ -36,7 +37,7 @@ public class RespostaNoticiaServlet extends HttpServlet {
 
             email.setFrom(meuEmail);
             email.setSubject(assunto);
-            email.setMsg(mensagem);
+            email.setMsg("Solicitante: " + nome + "\n\n" + mensagem);
             email.addTo(paraEmail);
             email.send();
             response.sendRedirect("NoticiasServlet");

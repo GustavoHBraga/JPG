@@ -21,17 +21,16 @@ public class NoticiasServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        //*********
-        //Corrigir caracteres especiais da tabela
+
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
-        //*********
+
         HttpSession session = request.getSession();
         String usuario = (String) session.getAttribute("username");
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
 
         try {
@@ -48,9 +47,10 @@ public class NoticiasServlet extends HttpServlet {
                     System.out.println(l.getTitulo());
                     System.out.println(l.getMensagem());
                     System.out.println(l.getData());
-                    request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("noticias.jsp").forward(request, response);
+
                 }
+                request.setAttribute("dados", lista);
+                request.getRequestDispatcher("noticias.jsp").forward(request, response);
 
             } else {
                 ArrayList<Noticias> lista = noticiasDAO.pesquisaNoticias(request.getParameter("mensagem"));
@@ -61,18 +61,17 @@ public class NoticiasServlet extends HttpServlet {
                     System.out.println(l.getTitulo());
                     System.out.println(l.getMensagem());
                     System.out.println(l.getData());
-                    request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("noticias.jsp").forward(request, response);
+
                 }
+                request.setAttribute("dados", lista);
+                request.getRequestDispatcher("noticias.jsp").forward(request, response);
             }
-            
-            response.sendRedirect("noticias.jsp");
-            
+
         } catch (Exception erro) {
-            
+
             throw new RuntimeException("ERRO NA LISTAGEM DE NOTÍCIAS: " + erro.getMessage());
         }
-        
+
     }
 
 }

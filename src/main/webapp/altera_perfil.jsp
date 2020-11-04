@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JPG | Perfil</title>
+        <title>JPG | Alterar perfil</title>
         <link rel="stylesheet" type="text/css" href="lib/css/altera_perfil.css">
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,12 +18,13 @@
 
         if (usuario == null) {
             response.sendRedirect("login.jsp");
+            return;
         }
     %>
     <body class="align">
         <h1 style="color: #4E5066">Perfil</h1>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <a href="#" onclick="swal('Caso queria alterar apenas um dado em especifíco, repita aos outros campos os mesmos dados da conta atual.');"><i class="fa fa-commenting" style="color: #fff; font-size: 20px;"></i></a>
+        <a href="#" onclick="swal('Caso queria alterar apenas um dado em especifíco, repita aos outros campos os mesmos dados da conta atual.');"><i class="fa fa-commenting" style="color: #4E5066; font-size: 20px;"></i></a>
         <br>
         <div class="grid">
             <form action="AlteraPerfilServlet" method="post" class="form login"  name="formAlteraPerfil">

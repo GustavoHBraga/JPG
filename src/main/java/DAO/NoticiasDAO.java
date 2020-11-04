@@ -57,6 +57,7 @@ public class NoticiasDAO {
 
                 Noticias noticia = new Noticias();
                 noticia.setIdNoticias(resultSet.getInt("id"));
+                noticia.setUsernameMedico(resultSet.getString("username"));
                 noticia.setTitulo(resultSet.getString("titulo"));
                 noticia.setMensagem(resultSet.getString("mensagem"));
                 noticia.setData(resultSet.getDate("data"));
