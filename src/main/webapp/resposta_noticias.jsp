@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>JPG | Encaminhar notícia</title>
+        <title>JPG | Resposta</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="lib/css/resposta_noticias.css">
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">

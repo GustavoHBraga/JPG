@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JPG | Notícias</title>
+        <title>JPG | Eventuais notícias</title>
         <link rel="stylesheet" type="text/css" href="lib/css/noticias.css">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
         <link rel="stylesheet" type="text/css" href="lib/css/noticiasSearch.css">
@@ -28,7 +28,7 @@
         <br><br>
         <a href="index.jsp">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #4E5066; font-size: 30px;"></i></a>
         <br><br><br><br>
-        <h3>NOTÍCIAS</h3>
+        <h3>EVENTUAIS NOTÍCIAS</h3>
         <br>
         <div class="container">
             <a href="registro_noticia.jsp"><button class="btn-5" style="font-size: 11px;">Publicar</button></a>

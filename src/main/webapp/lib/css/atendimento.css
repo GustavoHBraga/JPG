@@ -1,0 +1,43 @@
+.chat {
+    width: auto;
+    height: 200px;
+    border: 5px solid #4E5066;
+    overflow-y: scroll;
+    font-family: 'Calibri';
+    background-color: #4E5066;
+    color: #fff;
+}
+
+#msg {
+    width: 30%;
+    font-family: 'Calibri';
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Calibri';
+    color: #4E5066;
+}
+
+body{
+    background-color: #B0E0E6;
+    font-family: 'Calibri';
+}
+
+.form-contact-input {
+  width: 100%;
+  color: #4E5066;
+  font-size: 18px;
+  background-color: #E9E9E9;
+  border: 1px solid #E9E9E9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  text-indent: 20px;
+  font-family: 'Calibri';
+}
+

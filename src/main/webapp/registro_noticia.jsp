@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>JPG | Registro de notícias</title>
+        <title>JPG | Registro de eventuais notícias</title>
         <link rel="stylesheet" type="text/css" href="lib/css/registro_noticia.css">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
@@ -34,7 +34,7 @@
                 <input type="date" class="form-contact-input" name="data" required/>
                 <br><br>
                 <div class="container">
-                    <button class="btn-5" type="submit" style="font-size: 13px;">Publicar notícia</button>
+                    <button class="btn-5" type="submit" style="font-size: 13px;">Publicar</button>
                 </div>
             </form>
         </div>
