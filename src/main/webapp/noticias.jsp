@@ -77,7 +77,7 @@
                                 <p><c:out value="${l.getMensagem()}"/></p>
                                 <br>
                             </div>
-                            <a href="resposta_noticias.jsp"><i class="fa fa-envelope-o" style="color: #4E5066; font-size: 25px;"></i></a>
+                            <a href="resposta_noticias.jsp"><i class="fa fa-telegram" style="color: #4E5066; font-size: 25px;"></i></a>
                         </div>
                     </div>
                 </div>

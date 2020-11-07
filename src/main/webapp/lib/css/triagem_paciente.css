@@ -1,0 +1,65 @@
+#quiz-wrap {
+    padding:25px;
+    background:#f4f4f4;
+}
+#quiz-wrap form {
+    border-bottom:1px solid #979797;
+    padding-bottom:16px;
+    margin-bottom:24px;
+    display:block;
+}
+.quiz {
+    position: relative;
+    margin-bottom: 1px;
+    width: 100%;
+    overflow: hidden;
+}
+.quiz > input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+.quiz__label {
+    position: relative;
+    display: block;
+    padding: 0 0 0 1em;
+    font-weight: bold;
+    line-height: 3;
+    cursor: pointer;
+}
+.quiz__answer, .quiz__explanation {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .35s, opacity .1s;
+}
+.quiz__answer.correct {
+    background: #c1f4ca;
+}
+.quiz__answer.incorrect {
+    background: #f4cac1;
+}
+.quiz > input:checked + label > .quiz__answer, .quiz > input:checked ~ .quiz__explanation {
+    max-height: 100%;
+    padding: 1em;
+    opacity:1;
+}
+/* Icon */
+.quiz__label::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 3em;
+    line-height: 3;
+    text-align: center;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s;
+}
+.quiz > input[type=radio] + .quiz__label::after {
+    content: "❟";
+}
+.quiz > input[type=radio]:checked + .quiz__label::after {
+    content: "✓";
+}

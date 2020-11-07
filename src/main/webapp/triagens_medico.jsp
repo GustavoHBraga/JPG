@@ -12,10 +12,12 @@
     <body>
         <h1>testes chat</h1>
         <br><br>
-        <a href="atendimento.jsp">atendimento online</a>
+        <a href="atendimentoMedico.jsp">atendimento online</a>
         <br><br>
         <a href="#">minhas triagens</a>
         <br><br>
         <a href="index.jsp">Dashboard</a>
+        <br><br>
+        <a href="#">Paciente</a>
     </body>
 </html>

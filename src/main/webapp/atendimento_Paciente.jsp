@@ -33,7 +33,7 @@
                 var msg = document.getElementById("msg").value;
                 if (msg)
                 {
-                    ws.send("<%=session.getAttribute("username")%>: " + msg);
+                    ws.send("<%=request.getParameter("paciente")%>: " + msg);
                 }
                 document.getElementById("msg").value = "";
             }
@@ -42,7 +42,7 @@
     <%
         String usuario = (String) session.getAttribute("username");
 
-        if (usuario == null) {
+        if (usuario != null) {
             response.sendRedirect("login.jsp");
             return;
         }
@@ -60,14 +60,12 @@
                     <div class="container">
                         <button onclick="return sendMsg();" class="btn-5" style="font-size: 12px; color: seagreen;">Enviar</button>
                         <br>
-                        <a href="atendimento.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Desconectar</button></a>
+                        <a href="atendimentoPaciente.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Desconectar</button></a>
                         <br>
-                        <a href="triagens.jsp"><button class="btn-5" style="font-size: 11px;">Voltar</button></a>
+                        <a href="#"><button class="btn-5" style="font-size: 11px;">Voltar</button></a>
                     </div>
                 </div>
             </center>
         </div>
     </body>
 </html>
-
-

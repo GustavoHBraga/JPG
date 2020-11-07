@@ -38,7 +38,7 @@ public class InsereAtividadeServlet extends HttpServlet {
             AtividadesDAO atividadeDAO = new AtividadesDAO();
             Date data = Date.valueOf(request.getParameter("data"));
 
-            if (request.getParameter("titulo").equals("") || request.getParameter("status").equals("")) {
+            if (request.getParameter("titulo").equals("") || request.getParameter("mensagem").equals("") || request.getParameter("data").equals("") || request.getParameter("status").equals("")) {
                 response.sendRedirect("registro_atividade.jsp");
 
             } else {
