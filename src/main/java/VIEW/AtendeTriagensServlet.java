@@ -1,6 +1,6 @@
 package VIEW;
 
-import DAO.AtividadesDAO;
+import DAO.TriagensDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,8 +13,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author JPG
  */
-@WebServlet(name = "RemoveAtividadeServlet", urlPatterns = {"/RemoveAtividadeServlet"})
-public class RemoveAtividadeServlet extends HttpServlet {
+@WebServlet(name = "AtendeTriagensServlet", urlPatterns = {"/AtendeTriagensServlet"})
+public class AtendeTriagensServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -24,18 +24,18 @@ public class RemoveAtividadeServlet extends HttpServlet {
 
             HttpSession session = request.getSession();
             String usuario = (String) session.getAttribute("username");
-            
+
             if (usuario == null) {
                 response.sendRedirect("login.jsp");
                 return;
             }
 
-            AtividadesDAO atividadesDAO = new AtividadesDAO();
-            atividadesDAO.removerAtividades(Integer.parseInt(request.getParameter("id")));
-            response.sendRedirect("AtividadesServlet");
+            TriagensDAO triagensDAO = new TriagensDAO();
+            triagensDAO.atenderTriagem(Integer.parseInt(request.getParameter("id")));
+            response.sendRedirect("TriagensMedicoServlet");
 
         } catch (Exception erro) {
-            throw new RuntimeException("ERRO AO REMOVER ATIVIDADES: " + erro.getMessage());
+            throw new RuntimeException("ERRO AO ATENDER TRIAGEM: " + erro.getMessage());
         }
 
     }

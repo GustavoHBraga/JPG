@@ -93,6 +93,7 @@
                         <td class="text-left"><c:out value="${l.getCansaco()}"/></td>
                         <td class="text-left"><c:out value="${l.getFalta_ar()}"/></td>
                         <td class="text-left"><c:out value="${l.getPressao_peito()}"/></td>
+                        <td class="text-left"><a href="PDFTriagensServlet?id=<c:out value="${l.getIdTriagem()}"/>&cpf=<c:out value="${l.getCpf()}"/>&nome=<c:out value="${l.getNome()}"/>&data_nascimento=<c:out value="${l.getData_nascimento()}"/>&email=<c:out value="${l.getEmail()}"/>&cep=<c:out value="${l.getCep()}"/>&estado=<c:out value="${l.getEstado()}"/>&contato1=<c:out value="${l.getContato1()}"/>&contato2=<c:out value="${l.getContato2()}"/>&sexo=<c:out value="${l.getSexo()}"/>&febre=<c:out value="${l.getFebre()}"/>&tosse_seca=<c:out value="${l.getTosse_seca()}"/>&cansaco=<c:out value="${l.getCansaco()}"/>&falta_ar=<c:out value="${l.getFalta_ar()}"/>&pressao_peito=<c:out value="${l.getPressao_peito()}"/>"><i class="fa fa-file-pdf-o" style="color: teal; font-size: 28px;"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a onclick="return confirm('Deseja realmente concluir este atendimento ?')" href="AtendeTriagensServlet?id=<c:out value="${l.getIdTriagem()}"/>"<i class="fa fa-check" style="color: teal; font-size: 35px;"></i></a></td>
                     </tr>
                 </c:forEach>
             </tbody>

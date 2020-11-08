@@ -60,7 +60,7 @@ public class PDFAtividadesServlet extends HttpServlet {
             
             
         } catch (FileNotFoundException | DocumentException erro) {
-            System.out.println("HOUVE UM ERRO AO GERAR O PDF: " + erro.getMessage());
+            System.out.println("ERRO AO GERAR O PDF: " + erro.getMessage());
 
         } finally {
             
@@ -73,7 +73,7 @@ public class PDFAtividadesServlet extends HttpServlet {
             response.sendRedirect("AtividadesServlet");
 
         } catch (IOException erro) {
-            System.out.println("HOUVE UM ERRO AO ABRIR O PDF: " + erro.getMessage());
+            System.out.println("ERRO AO ABRIR O PDF: " + erro.getMessage());
         }
 
     }
