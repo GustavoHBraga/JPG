@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 public class TriagensPacienteServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         request.setCharacterEncoding("UTF-8");
@@ -48,6 +48,7 @@ public class TriagensPacienteServlet extends HttpServlet {
 
         } catch (Exception erro) {
             response.sendRedirect("infoTriagemPaciente.jsp");
+            System.out.println("ERRO NO REGISTRAMENTO DE TRIAGENS: " + erro.getMessage());
         }
 
     }

@@ -23,7 +23,7 @@
     %>
     <body>
     <center>
-        <form action="TriagensPacienteServlet" method="post">
+        <form action="TriagensPacienteServlet">
             <div class="contact_form">
                 <div class="formulario">            
                     <h1>Join For Protect Get</h1>

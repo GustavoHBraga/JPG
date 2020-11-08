@@ -22,9 +22,16 @@
         <p><b>Prezado Paciente,</b></p>
         <p><b>Sua triagem já está em nosso sistema, entraremos em contato em breve.</b></p>
         <p style="color: darkgreen;"><b>A JPG agradece a sua solicitação de atendimento !</b></p>
+        <br><br>
+        <p style="color: darkgreen;"><b>Caso queria solictar em atendimento prévio com um dos nossos atendentes, acesse nosso Atendimento Online.</b></p>
         <br><br><br><br>
+        <div class="container">
+            <a href="atendimento_paciente.jsp"><button class="btn-5" style="font-size: 12px;">Atendimento Online</button></a>
+        </div>
+        <br>
         <div class="container">
             <a href="login.jsp"><button class="btn-5" style="font-size: 12px;">Concluir</button></a>
         </div>
     </body>
 </html>
+

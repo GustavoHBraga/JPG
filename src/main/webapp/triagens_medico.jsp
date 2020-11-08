@@ -98,7 +98,6 @@
                 </c:forEach>
             </tbody>
         </table>
-        <br>
     </body>
 </html>
 

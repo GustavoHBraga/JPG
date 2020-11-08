@@ -44,6 +44,7 @@ public class RegistrosServlet extends HttpServlet {
 
         } catch (Exception erro) {
             response.sendRedirect("infoRegistro.jsp");
+            System.out.println("ERRO NO REGISTRAMENTO DE USUÁRIOS: " + erro.getMessage());
         }
     }
 }

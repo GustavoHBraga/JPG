@@ -32,7 +32,7 @@
                     <div class="tab-content">
                         <h2>Quem somos ?</h2>
                         <article>
-                            <p>Descreva...</p> 
+                            <p><b>Descreva...</b></p>
                         </article>
                     </div>
                 </li>
@@ -42,7 +42,7 @@
                     <div class="tab-content">
                         <h2>Oque fazemos ?</h2>
                         <article>
-                            <p>Descreva...</p> 
+                            <p><b>Descreva...</b></p>
                         </article>
                     </div>
                 </li>
@@ -52,7 +52,7 @@
                     <div class="tab-content">
                         <h2>Como fazemos ?</h2>
                         <article>
-                            <p>Descreva...</p>
+                            <p><b>Descreva...</b></p>
                         </article>
                     </div>
                 </li>
@@ -60,11 +60,11 @@
                     <input type="radio" name="tabs" class="rd_tab" id="tab4">
                     <label for="tab4" class="tab_label"><b>Equipe</b></label>
                     <div class="tab-content">
-                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Miguel Castro<br></h2>
-                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Gustavo Braga<br></h2>
-                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Gabriel Max<br></h2>
-                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Pedro Arantes<br></h2>
-                        <h2><i class="fa fa-graduation-cap" style="color: #2c3338; font-size: 30px;"></i>&nbsp;Jefferson Ouro<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #4E5066; font-size: 30px;"></i>&nbsp;Miguel Castro<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #4E5066; font-size: 30px;"></i>&nbsp;Gustavo Braga<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #4E5066; font-size: 30px;"></i>&nbsp;Gabriel Max<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #4E5066; font-size: 30px;"></i>&nbsp;Pedro Arantes<br></h2>
+                        <h2><i class="fa fa-graduation-cap" style="color: #4E5066; font-size: 30px;"></i>&nbsp;Jefferson Ouro<br></h2>
                     </div>
                 </li>
             </ul>

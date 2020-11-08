@@ -26,9 +26,7 @@
         <br><br><br>
         <div class="login">
             <div class="login-triangle"></div>
-
             <h2 class="login-header">iNFORME:</h2>
-
             <form action="RespostaNoticiaServlet" class="login-container">
                 <p>Para quem irá a resposta ?</p>
                 <p><input type="text" name="paraEmail" placeholder="Para *" required></p>

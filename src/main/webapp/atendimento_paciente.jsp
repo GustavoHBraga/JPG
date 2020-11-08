@@ -60,7 +60,7 @@
                     <div class="container">
                         <button onclick="return sendMsg();" class="btn-5" style="font-size: 12px; color: seagreen;">Enviar</button>
                         <br>
-                        <a href="login.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Desconectar</button></a>
+                        <a href="login.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Finalizar Atendimento</button></a>
                         <br>
                     </div>
                 </div>

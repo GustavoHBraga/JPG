@@ -33,7 +33,7 @@
                 var msg = document.getElementById("msg").value;
                 if (msg)
                 {
-                    ws.send("<%=session.getAttribute("username")%>: " + msg);
+                    ws.send("Atendente: " + msg);
                 }
                 document.getElementById("msg").value = "";
             }
@@ -60,7 +60,7 @@
                     <div class="container">
                         <button onclick="return sendMsg();" class="btn-5" style="font-size: 12px; color: seagreen;">Enviar</button>
                         <br>
-                        <a href="menu_triagem.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Finalizar</button></a>
+                        <a href="menu_triagem.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Finalizar Atendimento</button></a>
                     </div>
                 </div>
             </center>
