@@ -12,7 +12,7 @@
     <body>
         <h1>testes chat</h1>
         <br><br>
-        <a href="atendimentoMedico.jsp">atendimento online</a>
+        <a href="atendimento_Medico.jsp">atendimento online</a>
         <br><br>
         <a href="#">minhas triagens</a>
         <br><br>
