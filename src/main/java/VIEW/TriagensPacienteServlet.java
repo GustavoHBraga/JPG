@@ -14,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author JPG
  */
-@WebServlet(name = "TriagensServlet", urlPatterns = {"/TriagensServlet"})
-public class TriagensServlet extends HttpServlet {
+@WebServlet(name = "TriagensPacienteServlet", urlPatterns = {"/TriagensPacienteServlet"})
+public class TriagensPacienteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -44,7 +44,7 @@ public class TriagensServlet extends HttpServlet {
             triagens.setFalta_ar(request.getParameter("form4"));
             triagens.setPressao_peito(request.getParameter("form5"));
             triagensDAO.registrarTriagem(triagens);
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("confirma_triagem_paciente.jsp");
 
         } catch (Exception erro) {
             throw new RuntimeException("ERRO NO REGISTRAMENTO DE TRIAGENS: " + erro.getMessage());

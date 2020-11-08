@@ -21,7 +21,7 @@
         <br><br>
         <p><b>Prezado Paciente,</b></p>
         <p><b>Sua triagem já está em nosso sistema, entraremos em contato em breve.</b></p>
-        <p style="color: darkgreen;"><b>A JPG agradece sua solicitação de atendimento !</b></p>
+        <p style="color: darkgreen;"><b>A JPG agradece a sua solicitação de atendimento !</b></p>
         <br><br><br><br>
         <div class="container">
             <a href="login.jsp"><button class="btn-5" style="font-size: 12px;">Concluir</button></a>

@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JPG | Formulário</title>
+        <title>JPG | Triagem do Paciente</title>
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
         <link rel="stylesheet" type="text/css" href="lib/css/triagens_paciente.css">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
@@ -23,7 +23,7 @@
     %>
     <body>
     <center>
-        <form action="TriagensServlet" method="post">
+        <form action="TriagensPacienteServlet" method="post">
             <div class="contact_form">
                 <div class="formulario">            
                     <h1>Join For Protect Get</h1>
@@ -46,7 +46,7 @@
                     Clique em OK para prosseguir o atendimento.');"><i class="fa fa-commenting" style="color: #4E5066; font-size: 20px;"></i></a>
                     </center>
                     <h3>Informe abaixo suas credências para solicitar um atendimento.</h3>
-                    <input type="text" name="cpf" placeholder="CPF *" maxlength="20" required>
+                    <input type="text" name="cpf" placeholder="CPF *" maxlength="12" required>
                     <input type="text" name="nome" placeholder="Nome Completo *" maxlength="40" required>
                     <input type="date" name="data_nascimento" style="color: #ccc" required>
                     <input type="email" name="email" placeholder="E-mail *" maxlength="40" required>
