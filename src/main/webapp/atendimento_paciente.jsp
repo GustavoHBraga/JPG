@@ -7,7 +7,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JPG | Atendimento</title>
+        <title>JPG | Atendimento Online</title>
         <link rel="stylesheet" type="text/css" href="lib/css/atendimento.css">
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
@@ -19,7 +19,7 @@
             } else {
                 wsUrl = 'wss://';
             }
-            var ws = new WebSocket(wsUrl + window.location.host + "/JPG/atendimento_paciente");
+            var ws = new WebSocket(wsUrl + window.location.host + "/JPG/atendimento");
 
             ws.onmessage = function (event) {
                 var mySpan = document.getElementById("chat");
@@ -33,7 +33,7 @@
                 var msg = document.getElementById("msg").value;
                 if (msg)
                 {
-                    ws.send("<%=request.getParameter("paciente")%>: " + msg);
+                    ws.send("paciente: " + msg);
                 }
                 document.getElementById("msg").value = "";
             }
@@ -43,7 +43,7 @@
         String usuario = (String) session.getAttribute("username");
 
         if (usuario != null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("LogoffServlet");
             return;
         }
     %>
@@ -60,9 +60,8 @@
                     <div class="container">
                         <button onclick="return sendMsg();" class="btn-5" style="font-size: 12px; color: seagreen;">Enviar</button>
                         <br>
-                        <a href="atendimentoPaciente.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Desconectar</button></a>
+                        <a href="login.jsp"><button class="btn-5" style="font-size: 12px; color: salmon;">Desconectar</button></a>
                         <br>
-                        <a href="#"><button class="btn-5" style="font-size: 11px;">Voltar</button></a>
                     </div>
                 </div>
             </center>

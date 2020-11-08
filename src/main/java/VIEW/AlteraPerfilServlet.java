@@ -29,7 +29,7 @@ public class AlteraPerfilServlet extends HttpServlet {
         String usuario = (String) session.getAttribute("username");
 
         if (usuario == null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("LogoffServlet");
             return;
         }
 
@@ -69,7 +69,7 @@ public class AlteraPerfilServlet extends HttpServlet {
             }
 
         } catch (Exception erro) {
-            throw new RuntimeException("ERRO NO REGISTRAMENTO DE ATIVIDADES: " + erro.getMessage());
+            throw new RuntimeException("ERRO AO ALTERAR PERFIL: " + erro.getMessage());
 
         }
     }

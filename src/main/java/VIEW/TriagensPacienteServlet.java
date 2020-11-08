@@ -47,7 +47,7 @@ public class TriagensPacienteServlet extends HttpServlet {
             response.sendRedirect("confirma_triagem_paciente.jsp");
 
         } catch (Exception erro) {
-            throw new RuntimeException("ERRO NO REGISTRAMENTO DE TRIAGENS: " + erro.getMessage());
+            response.sendRedirect("infoTriagemPaciente.jsp");
         }
 
     }

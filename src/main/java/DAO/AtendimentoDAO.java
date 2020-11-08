@@ -11,7 +11,7 @@ import javax.websocket.server.ServerEndpoint;
 
 /**
  *
- * @author Miguel Castro
+ * @author JPG
  */
 @ServerEndpoint("/atendimento")
 public class AtendimentoDAO {

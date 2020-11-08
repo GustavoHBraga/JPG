@@ -12,6 +12,14 @@
         <link rel="stylesheet" type="text/css" href="lib/css/botao.css">
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
     </head>
+    <%
+        String usuario = (String) session.getAttribute("username");
+
+        if (usuario == null) {
+            response.sendRedirect("LogoffServlet");
+            return;
+        }
+    %>
     <body>
         <br><br><br><br>
         <h1>Menu de Triagem</h1>

@@ -17,7 +17,7 @@
         String usuario = (String) session.getAttribute("username");
 
         if (usuario == null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("LogoffServlet");
             return;
         }
     %>
@@ -30,23 +30,23 @@
             <form action="AlteraPerfilServlet" method="post" class="form login"  name="formAlteraPerfil">
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Usuário</span></label>
-                    <input id="login__username" type="text" name="username" class="form__input" placeholder="Novo nome de usuário *" required>
+                    <input id="login__username" type="text" name="username" value="<%=request.getParameter("username")%>" class="form__input" placeholder="Novo nome de usuário *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
-                    <input id="login__username" type="text" name="nome" class="form__input" placeholder="Alterar nome completo *" required>
+                    <input id="login__username" type="text" name="nome" value="<%=request.getParameter("nome")%>" class="form__input" placeholder="Alterar nome completo *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
-                    <input id="login__username" type="text" name="email" class="form__input" placeholder="Novo e-mail *" required>
+                    <input id="login__username" type="text" name="email" value="<%=request.getParameter("email")%>" class="form__input" placeholder="Novo e-mail *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
-                    <input id="login__username" type="text" name="crm" class="form__input" maxlength="10" placeholder="Novo crm *" required>
+                    <input id="login__username" type="text" name="crm" value="<%=request.getParameter("crm")%>" class="form__input" maxlength="10" placeholder="Novo crm *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__username"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#user"></use></svg><span class="hidden">Email</span></label>
-                    <input id="login__username" type="text" name="especializacao" class="form__input" placeholder="Nova especialização *" required>
+                    <input id="login__username" type="text" name="especializacao" value="<%=request.getParameter("especializacao")%>" class="form__input" placeholder="Nova especialização *" required>
                 </div>
                 <div class="form__field">
                     <label for="login__password"><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#lock"></use></svg><span class="hidden">SenhaNova</span></label>

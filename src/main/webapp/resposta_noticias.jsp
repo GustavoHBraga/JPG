@@ -12,6 +12,14 @@
         <link rel="shortcut icon" type="imagem/png" href="lib/img/logo.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
+    <%
+        String usuario = (String) session.getAttribute("username");
+
+        if (usuario == null) {
+            response.sendRedirect("LogoffServlet");
+            return;
+        }
+    %>
     <body>
         <br><br>
         <a href="index.jsp" style="text-decoration: none;">&nbsp;&nbsp;&nbsp;<i class="fa fa-home" style="color: #4E5066; font-size: 30px;"></i></a>

@@ -30,7 +30,7 @@ public class InsereNoticiaServlet extends HttpServlet {
             String usuario = (String) session.getAttribute("username");
 
             if (usuario == null) {
-                response.sendRedirect("login.jsp");
+                response.sendRedirect("LogoffServlet");
                 return;
             }
 

@@ -19,7 +19,7 @@
             } else {
                 wsUrl = 'wss://';
             }
-            var ws = new WebSocket(wsUrl + window.location.host + "/JPG/atendimento_medico");
+            var ws = new WebSocket(wsUrl + window.location.host + "/JPG/atendimento");
 
             ws.onmessage = function (event) {
                 var mySpan = document.getElementById("chat");
@@ -43,7 +43,7 @@
         String usuario = (String) session.getAttribute("username");
 
         if (usuario == null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("LogoffServlet");
             return;
         }
     %>

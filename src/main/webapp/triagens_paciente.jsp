@@ -17,7 +17,7 @@
         String usuario = (String) session.getAttribute("username");
 
         if (usuario != null) {
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("LogoffServlet");
             return;
         }
     %>

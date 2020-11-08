@@ -40,13 +40,10 @@ public class RegistrosServlet extends HttpServlet {
                 registroDAO.registrarMedicos(registro);
                 response.sendRedirect("login.jsp");
 
-            } else {
-                
-                response.sendRedirect("registros.jsp");
             }
 
         } catch (Exception erro) {
-            System.out.println("ERRO NO REGISTRAMENTO DE USUÁRIOS: " + erro.getMessage());
+            response.sendRedirect("infoRegistro.jsp");
         }
     }
 }

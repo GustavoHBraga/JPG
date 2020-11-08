@@ -29,7 +29,7 @@ public class TriagensMedicoServlet extends HttpServlet {
         String usuario = (String) session.getAttribute("username");
 
         if (usuario == null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("LogoffServlet");
             return;
         }
 
@@ -88,7 +88,6 @@ public class TriagensMedicoServlet extends HttpServlet {
             response.sendRedirect("triagens_medico.jsp");
 
         } catch (Exception erro) {
-
             throw new RuntimeException("ERRO NA LISTAGEM DE TRIAGENS: " + erro.getMessage());
         }
     }
