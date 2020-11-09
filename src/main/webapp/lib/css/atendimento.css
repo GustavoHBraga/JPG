@@ -8,6 +8,12 @@
     color: #fff;
 }
 
+select{
+    border-radius: 30px; 
+    color: #fff; 
+    background-color: #4E5066;
+}
+
 #msg {
     width: 30%;
     font-family: 'Calibri';

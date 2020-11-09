@@ -52,6 +52,7 @@
                 color: black;
             }
         </style>
+    <center>
         <br><br><br><br><br><br><br>
         <h1 style="color: #4E5066">&nbsp;&nbsp;O Coronavírus</h1>
 
@@ -136,5 +137,6 @@
         <iframe src="https://player.vimeo.com/video/447264182" width="450" height="300" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
         <br>
         <i style="color: #4E5066">&nbsp;&nbsp;&nbsp;#NALINHADEFRENTE</i>
+        </center>
     </body>
 </html>
