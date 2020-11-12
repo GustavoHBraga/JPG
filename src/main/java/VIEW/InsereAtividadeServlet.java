@@ -52,7 +52,7 @@ public class InsereAtividadeServlet extends HttpServlet {
                 response.sendRedirect("AtividadesServlet");
             }
 
-        } catch (Exception erro) {
+        } catch (IOException erro) {
             throw new RuntimeException("ERRO NO REGISTRAMENTO DE ATIVIDADES: " + erro.getMessage());
         }
 

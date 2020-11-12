@@ -42,52 +42,50 @@ public class TriagensMedicoServlet extends HttpServlet {
                 ArrayList<Triagens> lista = triagensDAO.listarTriagens();
 
                 for (Triagens l : lista) {
-                    System.out.println(l.getIdTriagem());
-                    System.out.println(l.getCpf());
-                    System.out.println(l.getNome());
-                    System.out.println(l.getData_nascimento());
-                    System.out.println(l.getEmail());
-                    System.out.println(l.getCep());
-                    System.out.println(l.getEstado());
-                    System.out.println(l.getContato1());
-                    System.out.println(l.getContato2());
-                    System.out.println(l.getSexo());
-                    System.out.println(l.getFebre());
-                    System.out.println(l.getTosse_seca());
-                    System.out.println(l.getCansaco());
-                    System.out.println(l.getFalta_ar());
-                    System.out.println(l.getPressao_peito());
-                    request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("triagens_medico.jsp").forward(request, response);
+                    l.getIdTriagem();
+                    l.getCpf();
+                    l.getNome();
+                    l.getData_nascimento();
+                    l.getEmail();
+                    l.getCep();
+                    l.getEstado();
+                    l.getContato1();
+                    l.getContato2();
+                    l.getSexo();
+                    l.getFebre();
+                    l.getTosse_seca();
+                    l.getCansaco();
+                    l.getFalta_ar();
+                    l.getPressao_peito();
                 }
+                request.setAttribute("dados", lista);
+                request.getRequestDispatcher("triagens_medico.jsp").forward(request, response);
 
             } else {
                 ArrayList<Triagens> lista = triagensDAO.pesquisaTriagem(request.getParameter("cpf"));
 
                 for (Triagens l : lista) {
-                    System.out.println(l.getIdTriagem());
-                    System.out.println(l.getCpf());
-                    System.out.println(l.getNome());
-                    System.out.println(l.getData_nascimento());
-                    System.out.println(l.getEmail());
-                    System.out.println(l.getCep());
-                    System.out.println(l.getEstado());
-                    System.out.println(l.getContato1());
-                    System.out.println(l.getContato2());
-                    System.out.println(l.getSexo());
-                    System.out.println(l.getFebre());
-                    System.out.println(l.getTosse_seca());
-                    System.out.println(l.getCansaco());
-                    System.out.println(l.getFalta_ar());
-                    System.out.println(l.getPressao_peito());
-                    request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("triagens_medico.jsp").forward(request, response);
+                    l.getIdTriagem();
+                    l.getCpf();
+                    l.getNome();
+                    l.getData_nascimento();
+                    l.getEmail();
+                    l.getCep();
+                    l.getEstado();
+                    l.getContato1();
+                    l.getContato2();
+                    l.getSexo();
+                    l.getFebre();
+                    l.getTosse_seca();
+                    l.getCansaco();
+                    l.getFalta_ar();
+                    l.getPressao_peito();
                 }
+                request.setAttribute("dados", lista);
+                request.getRequestDispatcher("triagens_medico.jsp").forward(request, response);
             }
 
-            response.sendRedirect("triagens_medico.jsp");
-
-        } catch (Exception erro) {
+        } catch (IOException | ServletException erro) {
             throw new RuntimeException("ERRO NA LISTAGEM DE TRIAGENS: " + erro.getMessage());
         }
     }

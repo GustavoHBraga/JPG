@@ -49,7 +49,7 @@ public class AlteraAtividadeServlet extends HttpServlet {
                 response.sendRedirect("AtividadesServlet");
             }
 
-        } catch (Exception erro) {
+        } catch (IOException | NumberFormatException erro) {
             throw new RuntimeException("ERRO NA ALTERAÇÃO DE ATIVIDADES: " + erro.getMessage());
         }
 

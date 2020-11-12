@@ -34,7 +34,7 @@ public class RemoveAtividadeServlet extends HttpServlet {
             atividadesDAO.removerAtividades(Integer.parseInt(request.getParameter("id")));
             response.sendRedirect("AtividadesServlet");
 
-        } catch (Exception erro) {
+        } catch (IOException | NumberFormatException erro) {
             throw new RuntimeException("ERRO AO REMOVER ATIVIDADES: " + erro.getMessage());
         }
 

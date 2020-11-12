@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.mail.DefaultAuthenticator;
+import org.apache.commons.mail.EmailException;
 import org.apache.commons.mail.SimpleEmail;
 
 /**
@@ -42,7 +43,7 @@ public class RespostaNoticiaServlet extends HttpServlet {
             email.send();
             response.sendRedirect("NoticiasServlet");
 
-        } catch (Exception erro) {
+        } catch (IOException | EmailException erro) {
             response.sendRedirect("NoticiasServlet");
             System.out.println("ERRO AO ENVIAR E-MAIL: " + erro.getMessage());
         }

@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -49,7 +50,7 @@ public class TriagensDAO {
             preparedStatement.execute();
             preparedStatement.close();
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NO REGISTRAMENTO DE TRIAGEM: " + erro.getMessage());
         }
     }
@@ -64,7 +65,7 @@ public class TriagensDAO {
             statement.execute(sql);
             statement.close();
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO AO ATENDER TRIAGEM: " + erro.getMessage());
         }
     }
@@ -99,7 +100,7 @@ public class TriagensDAO {
                 lista.add(triagem);
             }
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NA LISTAGEM DAS TRIAGENS: " + erro.getMessage());
         }
         return lista;
@@ -134,7 +135,7 @@ public class TriagensDAO {
                 lista.add(triagem);
             }
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NA PESQUISA DAS TRIAGENS: " + erro.getMessage());
         }
         return lista;

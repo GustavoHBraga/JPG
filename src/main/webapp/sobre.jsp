@@ -32,7 +32,9 @@
                     <div class="tab-content">
                         <h2>Quem somos ?</h2>
                         <article>
-                            <p><b>Descreva...</b></p>
+                            <p><b>Somos alunos do Centro Universitário Senac, do curso de Análise e Desenvolvimento de Sistemas, da disciplina Projeto Integrador III.</b></p>
+                            <br>
+                            <p><b>Nosso objetivo com este projeto é encontrar uma forma de auxiliar na triagem de pacientes em hospitais, para maior agilidade na detecção da COVID-19 e com algumas funcionalidades para ajudar na rotina de médicos.</b></p>
                         </article>
                     </div>
                 </li>

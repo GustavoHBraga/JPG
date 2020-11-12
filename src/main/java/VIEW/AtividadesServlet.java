@@ -24,7 +24,7 @@ public class AtividadesServlet extends HttpServlet {
 
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
-        
+
         HttpSession session = request.getSession();
         String usuario = (String) session.getAttribute("username");
 
@@ -42,33 +42,31 @@ public class AtividadesServlet extends HttpServlet {
                 ArrayList<Atividades> lista = atividadesDAO.listarAtividades(usuario);
 
                 for (Atividades l : lista) {
-                    System.out.println(l.getIdAtividade());
-                    System.out.println(l.getTitulo());
-                    System.out.println(l.getMensagem());
-                    System.out.println(l.getData());
-                    System.out.println(l.getStatus());
-                    request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("atividades.jsp").forward(request, response);
+                    l.getIdAtividade();
+                    l.getTitulo();
+                    l.getMensagem();
+                    l.getData();
+                    l.getStatus();
                 }
+                request.setAttribute("dados", lista);
+                request.getRequestDispatcher("atividades.jsp").forward(request, response);
 
             } else {
                 ArrayList<Atividades> lista = atividadesDAO.pesquisaAtividades(request.getParameter("mensagem"));
 
                 for (Atividades l : lista) {
-                    System.out.println(l.getIdAtividade());
-                    System.out.println(l.getTitulo());
-                    System.out.println(l.getMensagem());
-                    System.out.println(l.getData());
-                    System.out.println(l.getStatus());
-                    request.setAttribute("dados", lista);
-                    request.getRequestDispatcher("atividades.jsp").forward(request, response);
+                    l.getIdAtividade();
+                    l.getTitulo();
+                    l.getMensagem();
+                    l.getData();
+                    l.getStatus();
                 }
+                request.setAttribute("dados", lista);
+                request.getRequestDispatcher("atividades.jsp").forward(request, response);
             }
-            
-            response.sendRedirect("atividades.jsp");
-            
-        } catch (Exception erro) {
-            
+
+
+        } catch (IOException | ServletException erro) {
             throw new RuntimeException("ERRO NA LISTAGEM DE ATIVIDADES: " + erro.getMessage());
         }
     }

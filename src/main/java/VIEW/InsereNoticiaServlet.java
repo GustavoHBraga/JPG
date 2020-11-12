@@ -51,7 +51,7 @@ public class InsereNoticiaServlet extends HttpServlet {
                 response.sendRedirect("NoticiasServlet");
             }
 
-        } catch (Exception erro) {
+        } catch (IOException erro) {
             throw new RuntimeException("ERRO NO REGISTRAMENTO DE NOTÍCIAS: " + erro.getMessage());
         }
     }

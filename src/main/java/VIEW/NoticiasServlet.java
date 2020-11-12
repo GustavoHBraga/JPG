@@ -42,12 +42,11 @@ public class NoticiasServlet extends HttpServlet {
                 ArrayList<Noticias> lista = noticiasDAO.listarNoticias();
 
                 for (Noticias l : lista) {
-                    System.out.println(l.getIdNoticias());
-                    System.out.println(l.getUsernameMedico());
-                    System.out.println(l.getTitulo());
-                    System.out.println(l.getMensagem());
-                    System.out.println(l.getData());
-
+                    l.getIdNoticias();
+                    l.getUsernameMedico();
+                    l.getTitulo();
+                    l.getMensagem();
+                    l.getData();
                 }
                 request.setAttribute("dados", lista);
                 request.getRequestDispatcher("noticias.jsp").forward(request, response);
@@ -56,18 +55,17 @@ public class NoticiasServlet extends HttpServlet {
                 ArrayList<Noticias> lista = noticiasDAO.pesquisaNoticias(request.getParameter("mensagem"));
 
                 for (Noticias l : lista) {
-                    System.out.println(l.getIdNoticias());
-                    System.out.println(l.getUsernameMedico());
-                    System.out.println(l.getTitulo());
-                    System.out.println(l.getMensagem());
-                    System.out.println(l.getData());
-
+                    l.getIdNoticias();
+                    l.getUsernameMedico();
+                    l.getTitulo();
+                    l.getMensagem();
+                    l.getData();
                 }
                 request.setAttribute("dados", lista);
                 request.getRequestDispatcher("noticias.jsp").forward(request, response);
             }
 
-        } catch (Exception erro) {
+        } catch (IOException | ServletException erro) {
 
             throw new RuntimeException("ERRO NA LISTAGEM DE NOTÍCIAS: " + erro.getMessage());
         }

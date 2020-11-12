@@ -45,7 +45,7 @@ public class PerfilServlet extends HttpServlet {
                 request.getRequestDispatcher("perfil.jsp").forward(request, response);
             }
 
-        } catch (Exception erro) {
+        } catch (IOException | ServletException erro) {
             System.out.println("ERRO AO VISUALIZAR PERFIL: " + erro.getMessage());
         }
     }

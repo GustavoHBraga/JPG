@@ -4,6 +4,7 @@ import MODEL.Registros;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -40,7 +41,7 @@ public class RegistrosDAO {
             preparedStatement.execute();
             preparedStatement.close();
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NO REGISTRAMENTO DE USUÁRIOS: " + erro.getMessage());
         }
     }
@@ -65,7 +66,7 @@ public class RegistrosDAO {
                 lista.add(registro);
             }
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NA EXIBIÇÃO DE PERFIL: " + erro.getMessage());
         }
         return lista;
@@ -88,7 +89,7 @@ public class RegistrosDAO {
             preparedStatement.execute();
             preparedStatement.close();
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("HOUVE UM ERRO NA ALTERAÇÃO DE PERFIL: " + erro.getMessage());
         }
 

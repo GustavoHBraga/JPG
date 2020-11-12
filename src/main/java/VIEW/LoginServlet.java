@@ -4,6 +4,7 @@ import DAO.ConnectionFactory;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -54,7 +55,7 @@ public class LoginServlet extends HttpServlet {
                 }
             }
 
-        } catch (Exception erro) {
+        } catch (IOException | SQLException | ServletException erro) {
             System.out.println("ERRO AO REALIZAR ACESSO AO SISTEMA: " + erro.getMessage());
 
         }

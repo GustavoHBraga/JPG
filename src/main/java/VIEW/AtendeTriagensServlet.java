@@ -34,7 +34,7 @@ public class AtendeTriagensServlet extends HttpServlet {
             triagensDAO.atenderTriagem(Integer.parseInt(request.getParameter("id")));
             response.sendRedirect("TriagensMedicoServlet");
 
-        } catch (Exception erro) {
+        } catch (IOException | NumberFormatException erro) {
             throw new RuntimeException("ERRO AO ATENDER TRIAGEM: " + erro.getMessage());
         }
 

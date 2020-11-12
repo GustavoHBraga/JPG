@@ -46,7 +46,7 @@ public class TriagensPacienteServlet extends HttpServlet {
             triagensDAO.registrarTriagem(triagens);
             response.sendRedirect("confirma_triagem_paciente.jsp");
 
-        } catch (Exception erro) {
+        } catch (IOException erro) {
             response.sendRedirect("infoTriagemPaciente.jsp");
             System.out.println("ERRO NO REGISTRAMENTO DE TRIAGENS: " + erro.getMessage());
         }

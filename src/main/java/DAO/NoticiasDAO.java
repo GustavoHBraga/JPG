@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
@@ -39,7 +40,7 @@ public class NoticiasDAO {
             preparedStatement.execute();
             preparedStatement.close();
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NO REGISTRAMENTO DE NOTÍCIAS: " + erro.getMessage());
         }
     }
@@ -64,7 +65,7 @@ public class NoticiasDAO {
                 lista.add(noticia);
             }
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NA LISTAGEM DAS NOTÍCIAS: " + erro.getMessage());
         }
         return lista;
@@ -88,7 +89,7 @@ public class NoticiasDAO {
                 lista.add(noticia);
             }
 
-        } catch (Exception erro) {
+        } catch (SQLException erro) {
             throw new RuntimeException("ERRO NA PESQUISA DAS NOTÍCIAS: " + erro.getMessage());
         }
         return lista;
