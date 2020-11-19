@@ -20,6 +20,11 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author JPG
  */
+
+/**
+ * Neste cód. foi adicionada uma biblioteca .jar chamada "itextpdf". 
+ * Que nos permite criar documentos em PDF.
+ */
 @WebServlet(name = "PDFTriagensServlet", urlPatterns = {"/PDFTriagensServlet"})
 public class PDFTriagensServlet extends HttpServlet {
 
@@ -27,15 +32,17 @@ public class PDFTriagensServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        //Instanciando um Objeto da biblioteca "itextpdf".
         Document documento = new Document();
 
         try {
-            
+            //Cria uma instância do documento (objeto) e da nome a ele.
             PdfWriter.getInstance(documento, new FileOutputStream("triagem.pdf"));
+            //Abrindo o documento.
             documento.open();
-            
+            //Defindo o tamanho da página do PDF.
             documento.setPageSize(PageSize.A4);
-                   
+            //Adicionando paragráfos e resgatando dados para utlizar no PDF.    
             documento.add(new Paragraph("\n"));
             documento.add(new Paragraph("\n"));
             documento.add(new Paragraph("JOIN FOR PROTECT GET"));
@@ -117,19 +124,25 @@ public class PDFTriagensServlet extends HttpServlet {
             
             
         } catch (FileNotFoundException | DocumentException erro) {
+            /**
+             * @exception - Tratando exceções.
+             */
             System.out.println("ERRO AO GERAR O PDF: " + erro.getMessage());
 
         } finally {
-            
+            //Fechando o documento.
             documento.close();
         }
 
         try {
-            
+            //Abrindo o PDF automaticamente após ser criado.
             Desktop.getDesktop().open(new File("triagem.pdf"));
             response.sendRedirect("TriagensMedicoServlet");
 
         } catch (IOException erro) {
+            /**
+             * @exception - Tratando exceções.
+             */
             System.out.println("ERRO AO ABRIR O PDF: " + erro.getMessage());
         }
 
