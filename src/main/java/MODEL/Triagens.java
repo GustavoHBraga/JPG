@@ -1,3 +1,4 @@
+
 package MODEL;
 
 import java.util.Date;
@@ -6,8 +7,11 @@ import java.util.Date;
  *
  * @author JPG
  */
-public class Triagens {
 
+//Encapsulando e definindo atributos.
+public class Triagens {
+    
+    //Atributos.
     private int idTriagem;
     private String cpf;
     private String nome;
@@ -23,7 +27,8 @@ public class Triagens {
     private String cansaco;
     private String falta_ar;
     private String pressao_peito;
-
+    
+    //Encapsulamentos.
     public int getIdTriagem() {
         return idTriagem;
     }

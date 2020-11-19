@@ -7,14 +7,18 @@ import java.util.Date;
  *
  * @author JPG
  */
+
+//Encapsulando e definindo atributos.
 public class Noticias {
-    
+
+    //Atributos.    
     private int idNoticias;
     private String usernameMedico;
     private String titulo;
     private String mensagem;
     private Date data;
 
+    //Encapsulamentos.      
     public int getIdNoticias() {
         return idNoticias;
     }
@@ -54,5 +58,5 @@ public class Noticias {
     public void setData(Date data) {
         this.data = data;
     }
-    
+
 }

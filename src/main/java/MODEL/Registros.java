@@ -1,11 +1,15 @@
+
+package MODEL;
+
 /**
  *
  * @author JPG
  */
-package MODEL;
 
+//Encapsulando e definindo atributos.
 public class Registros {
 
+    //Atributos.
     private int idUser;
     private String username;
     private String nome;
@@ -14,7 +18,7 @@ public class Registros {
     private String especializacao;
     private String senha;
     
-    
+    //Encapsulamentos.    
     public int getIdUser() {
         return idUser;
     }

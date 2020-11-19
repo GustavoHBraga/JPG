@@ -1,3 +1,4 @@
+
 package MODEL;
 
 import java.util.Date;
@@ -6,8 +7,11 @@ import java.util.Date;
  *
  * @author JPG
  */
+
+//Encapsulando e definindo atributos.
 public class Atividades {
 
+    //Atributos.     
     private int idAtividade;
     private String usernameMedico;
     private String titulo;
@@ -15,8 +19,7 @@ public class Atividades {
     private Date data;
     private String status;
     
-    
-    
+    //Encapsulamentos.      
     public int getIdAtividade() {
         return idAtividade;
     }
