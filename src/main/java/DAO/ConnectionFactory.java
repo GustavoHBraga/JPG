@@ -16,7 +16,7 @@ public class ConnectionFactory {
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/jpg?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=UTC", "root", "");
+            return DriverManager.getConnection("jdbc:mysql://senac-tads-mysql-8.mysql.database.azure.com:3306/jpg?useUnicode=yes&characterEncoding=UTF-8&useTimezone=true&serverTimezone=UTC", "tads@senac-tads-mysql-8", "abc123@@");
         } catch (ClassNotFoundException | SQLException erro) {
             /**
              * @exception - Tratando exceções.
