@@ -21,7 +21,14 @@ public class AlteraAtividadeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Validando sessão de usuário; 
+         * 2) Validando campos de preenchimento;
+         * 3) Recebendo os dados;
+         * 4) Executando método; e
+         * 5) Tratando Exceções;
+         */
         try {
             Atividades atividades = new Atividades();
             AtividadesDAO atividadesDAO = new AtividadesDAO();

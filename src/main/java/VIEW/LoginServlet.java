@@ -24,7 +24,15 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Validando campos de preenchimento;
+         * 2) Recebendo os dados;
+         * 3) Abrindo conexão e realizando busca no Banco de Dados;
+         * 4) Atribuindo uma sessão ao usuário; e
+         * 5) Tratando Exceções;
+         */
+        
         try {
             
             if (request.getParameter("username") != null && request.getParameter("senha") != null) {

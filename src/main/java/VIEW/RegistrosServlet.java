@@ -19,7 +19,14 @@ public class RegistrosServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Validando campos de preenchimento;
+         * 2) Recebendo os dados;
+         * 3) Executando método; e
+         * 4) Tratando Exceções;
+         */
+        
         try {
 
             Registros registro = new Registros();

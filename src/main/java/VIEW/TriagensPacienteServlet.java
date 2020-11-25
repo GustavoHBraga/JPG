@@ -20,7 +20,13 @@ public class TriagensPacienteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Recebendo os dados;
+         * 2) Executando método; e
+         * 3) Tratando Exceções;
+         */
+        
         request.setCharacterEncoding("UTF-8");
 
         try {

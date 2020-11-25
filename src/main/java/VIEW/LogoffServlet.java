@@ -18,7 +18,11 @@ public class LogoffServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Removendo a atribuição de sessão do usuário;
+         */
+        
         HttpSession session = request.getSession();
         session.invalidate();
         response.sendRedirect("login.jsp");

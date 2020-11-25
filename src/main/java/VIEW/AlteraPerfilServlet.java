@@ -25,7 +25,16 @@ public class AlteraPerfilServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Validando sessão de usuário; 
+         * 2) Abrindo conexão e realizando busca no Banco de Dados; 
+         * 3) Validando campos de preenchimento;
+         * 4) Recebendo os dados;
+         * 5) Executando método; e
+         * 6) Tratando Exceções;
+         */
+        
         HttpSession session = request.getSession();
         String usuario = (String) session.getAttribute("username");
 
@@ -33,7 +42,7 @@ public class AlteraPerfilServlet extends HttpServlet {
             response.sendRedirect("LogoffServlet");
             return;
         }
-
+        
         try {
 
             Connection conexao = new ConnectionFactory().getConexao();

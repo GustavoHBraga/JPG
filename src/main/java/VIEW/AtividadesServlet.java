@@ -21,7 +21,14 @@ public class AtividadesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Validando sessão de usuário; 
+         * 2) Validando campos de preenchimento; 
+         * 3) Exibindo dados; e
+         * 4) Tratando Exceções;
+         */
+        
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html; charset=UTF-8");
 

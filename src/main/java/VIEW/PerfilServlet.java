@@ -21,7 +21,13 @@ public class PerfilServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
+        /**
+         * 1) Validando sessão de usuário; 
+         * 2) Exibindo dados; e
+         * 3) Tratando Exceções;
+         */
+        
         HttpSession session = request.getSession();
         String usuario = (String) session.getAttribute("username");
 
