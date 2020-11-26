@@ -20,7 +20,7 @@
         <name>Senac TADS PI3 20.2</name>
     </organization>
     
-    
+
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
