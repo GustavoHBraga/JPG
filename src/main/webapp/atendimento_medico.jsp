@@ -18,7 +18,7 @@
             } else {
                 wsUrl = 'wss://';
             }
-            var ws = new WebSocket(wsUrl + window.location.host + "/JPG/atendimento");
+            var ws = new WebSocket(wsUrl + window.location.host + "/atendimento");
 
             ws.onmessage = function (event) {
                 var mySpan = document.getElementById("chat");
